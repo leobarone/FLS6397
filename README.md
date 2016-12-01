@@ -1,3 +1,9 @@
+---
+title: "FLS 6397 - Introdução à Programação e Ferramentas Computacionais para as Ciências Sociais"
+author: "Leonardo S. Barone e Fernando Limongi"
+date: "01-12-2016"
+output: pdf_document
+---
 
 # FLS 6397 - Introdução à Programação e Ferramentas Computacionais para as Ciências Sociais
 
@@ -9,7 +15,7 @@ versão online do programa disponível em https://github.com/leobarone/FLS6397/
 1o de 2016
 
 ### Responsáveis: 
-Leonardo Barone e Fernando Limongi
+Leonardo S. Barone e Fernando Limongi
 
 ### Horário: 
 Segundas-feiras, no período da manhã (horário de início a definir)
