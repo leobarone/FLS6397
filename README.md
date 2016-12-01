@@ -9,7 +9,7 @@ versão online do programa disponível em https://github.com/leobarone/FLS6397/
 1o de 2016
 
 ### Responsáveis: 
-Fernando Limongi e Leonardo Barone
+Leonardo Barone e Fernando Limongi
 
 ### Horário: 
 Segundas-feiras, no período da manhã (horário de início a definir)
