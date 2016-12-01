@@ -48,7 +48,7 @@ Entre aulas, tutoriais e desafios, espera-se que cada alun@ dedique de 8h a 12h 
 
 ### Avaliação
 
-A avaliação é composta pela entrega dos desafios e de um projeto final de organização de dados. A atribuição de nota para os desafios e projetos entregues priorizará o esforço e engenhosidade apresentados (leia-se "código com erros, mas bem elaborado")  em detrimento da finalização do desafio (leia-se "código funcionando plenamente") como forma de encojarar estudantes iniciantes. 
+A avaliação é composta pela entrega dos desafios e de um projeto final de organização de dados. A atribuição de nota para os desafios e projetos entregues priorizará o esforço e engenhosidade apresentados (leia-se "código com erros, mas bem elaborado")  em detrimento da finalização do desafio (leia-se "código funcionando plenamente") como forma de encorajar estudantes iniciantes. 
 
 ## 4. Requisitos
 
