@@ -77,17 +77,19 @@ A ser definina em breve.
 10. Mapas e GIS
 11. Redes e grafos 
 
-## 7. Bibliografia
+## 7. Bibliografia (PRELIMINAR)
 
-Jones, O., Maillardet, R., & Robinson, A. (2009). Introduction to Scientific Programming and Simulation Using R (1 edition). Boca Raton, FL: Chapman and Hall/CRC.
-Makhabel, B. (2015). Learning Data Mining with R. Packt Publishing Ltd.
-Munzert, S., Rubba, C., MeiBner, P., & Nyhuis, D. (2014). Automated Data Collection with R: A Practical Guide to Web Scraping and Text Mining. John Wiley & Sons.
-Nolan, D., & Lang, D. T. (2013). XML and Web Technologies for Data Sciences with R. Springer Science & Business Media.
-Teetor, P. (2011). R Cookbook: Proven Recipes for Data Analysis, Statistics, and Graphics. O’Reilly Media, Inc.
-Wickham, Hadley. ggplot2: Elegant Graphics for Data Analysis. Springer-Verlag New York, 2009.
-Wickham, Hadley and Francois, Romain (2016). dplyr: A Grammar of Data Manipulation. R package version 0.5.0. https://CRAN.R-project.org/package=dplyr
-Zuur, A., Ieno, E. N., & Meesters, E. (2009). A Beginner’s Guide to R (2009 edition). Dordrecht ; New York: Springer.
+## Livros
+- Jones, O., Maillardet, R., & Robinson, A. (2009). Introduction to Scientific Programming and Simulation Using R (1 edition). Boca Raton, FL: Chapman and Hall/CRC.
+- Makhabel, B. (2015). Learning Data Mining with R. Packt Publishing Ltd.
+- Munzert, S., Rubba, C., MeiBner, P., & Nyhuis, D. (2014). Automated Data Collection with R: A Practical Guide to Web Scraping and Text Mining. John Wiley & Sons.
+- Nolan, D., & Lang, D. T. (2013). XML and Web Technologies for Data Sciences with R. Springer Science & Business Media.
+- Teetor, P. (2011). R Cookbook: Proven Recipes for Data Analysis, Statistics, and Graphics. O’Reilly Media, Inc.
+- Wickham, Hadley. ggplot2: Elegant Graphics for Data Analysis. Springer-Verlag New York, 2009.
+- Wickham, Hadley and Francois, Romain (2016). dplyr: A Grammar of Data Manipulation. R package version 0.5.0. https://CRAN.R-project.org/package=dplyr
+- Zuur, A., Ieno, E. N., & Meesters, E. (2009). A Beginner’s Guide to R (2009 edition). Dordrecht ; New York: Springer.
 
-Barone, Leonardo Sangali, Aslan, Alexia and McDonnell, Robert Myles  (2016). bRasilLegis: R Tools for Brazilian Chamber of Deputies (Camara Dos Deputados) Data. R package version 1.0. https://CRAN.R-project.org/package=bRasilLegis
-Ingo Feinerer and Kurt Hornik (2015). tm: Text Mining Package. R package version 0.6-2. https://CRAN.R-project.org/package=tm
-Duncan Temple Lang and the CRAN Team (2016). XML: Tools for Parsing and Generating XML Within R and S-Plus. R package version 3.98-1.4. https://CRAN.R-project.org/package=XML
+## Ferramentas
+- Barone, Leonardo Sangali, Aslan, Alexia and McDonnell, Robert Myles  (2016). bRasilLegis: R Tools for Brazilian Chamber of Deputies (Camara Dos Deputados) Data. R package version 1.0. https://CRAN.R-project.org/package=bRasilLegis
+- Ingo Feinerer and Kurt Hornik (2015). tm: Text Mining Package. R package version 0.6-2. https://CRAN.R-project.org/package=tm
+- Duncan Temple Lang and the CRAN Team (2016). XML: Tools for Parsing and Generating XML Within R and S-Plus. R package version 3.98-1.4. https://CRAN.R-project.org/package=XML
