@@ -1,4 +1,4 @@
-###  FLS 6397 - Introdução à Programação e Ferramentas Computacionais para as Ciências Sociais"
+#  FLS 6397 - Introdução à Programação e Ferramentas Computacionais para as Ciências Sociais"
 
 versão online do programa disponível em https://github.com/leobarone/FLS6397/
 
