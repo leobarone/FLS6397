@@ -5,7 +5,7 @@ versão online do programa disponível em https://github.com/leobarone/FLS6397/
 ## 1. Informações básicas
 
 ### Semestre: 
-1o de 2016
+1o de 2017
 
 ### Responsáveis: 
 Leonardo S. Barone e Fernando Limongi
