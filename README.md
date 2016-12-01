@@ -3,12 +3,24 @@
 
 versão online do programa disponível em https://github.com/leobarone/FLS6397/
 
-## Informações básicas
-### Responsáveis: Fernando Limongi e Leonardo Barone
-### Horário: Segundas-feiras, no período da manhã (horário de início a definir)
-### Sala: a definir
+## 1. Informações básicas
 
-## Apresentação
+### Semestre: 
+1o de 2016
+
+### Responsáveis: 
+Fernando Limongi e Leonardo Barone
+
+### Horário: 
+Segundas-feiras, no período da manhã (horário de início a definir)
+
+### Sala: 
+a definir
+
+### Número de Créditos: 
+8
+
+## 2. Apresentação
 
 O curso oferece aos estudantes de pós-graduação em ciências sociais uma iniciação à lógica de programação e ao uso ferramentas computacionais para (1) coleta (2) organização e preparação e (3) apresentação de dados para pesquisa social. O foco do curso é o desenvolvimento da habilidade de programação para solução de problemas diversos relacionados ao manejo de dados com fins de pesquisa. Note-se que não é um curso de metodologia de pesquisa, análise de dados ou de ciências sociais computacionais.
 
@@ -16,15 +28,7 @@ Este curso pretende preencher uma lacuna de formação comum em alun@s de pós-g
 
 O curso está dividido em duas partes. A primeira parte do curso foca na preparação do ambiente computacional, apresentação de ferramentas e "alfabetização" e nas linguagens de programação utilizadas no curso -- R, Git, SQL, Markdown, etc. A segunda parte foca em aplicações das habilidades desenvolvidas a problemas de manipulação de grandes bases de dados, coleta de dados na internet e via uso de APIs de terceiros, organização de documentos para análise textual, confecção de gráficos e mapas ou demais tópicos de interesse da turma. Os tópicos serão apresentadas definitivamente no syllabus no começo do semestre e abaixo segue uma lista provisória.
 
-## Requisitos
-
-Não é necessário nenhum conhecimento prévio de programação, pacotes estatísticos ou manejo de conjuntos de dados. O curso é recomendado para tanto alun@s que já têm alguma noção quanto para estudantes que morrem de medo de computadores. O objetivo é criar um ambiente confortável para o aprendizado de técnicas programação, independentemente da habilidade d@s inscrit@s, e seguindo todos os passos desde a preparação do ambiente de computação até a apresentação de resultados.
-
-É recomendado que @s alun@s inscrit@s já tenham concluído ou esteja cursando algum curso de métodos de pesquisa (de qualquer abordagem) ou de análise de dados, seja do programa ou da IPSA Summer School. É um curso adequado para estudantes em qualquer etapa do mestrado ou doutorado, desde que tenham disponibilidade para realizar as atividades extra-classe.
-
-Estudantes do DCP-USP que podem se matricular regularmente não serão aceit@s como ouvintes.
-
-## Aulas, leituras, materiais, atividades, tempo de dedicação e avaliação
+## 3. Estrutura do curso
 
 ### Aulas
 As aulas serão compostas por breves apresentações dos tópicos e por longos laboratórios, com tutoriais para auto-aprendizado e acompanhamento dos instrutores e assistentes. Espera-se que a turma pratique exaustivamente, dentro e fora de sala de aula, as técnicas aprendidas.
@@ -47,7 +51,19 @@ Entre aulas, tutoriais e desafios, espera-se que cada alun@ dedique de 8h a 12h 
 
 A avaliação é composta pela entrega dos desafios e de um projeto final de organização de dados. A atribuição de nota para os desafios e projetos entregues priorizará o esforço e engenhosidade apresentados (leia-se "código com erros, mas bem elaborado")  em detrimento da finalização do desafio (leia-se "código funcionando plenamente") como forma de encojarar estudantes iniciantes. 
 
-## Tópicos (PROVISÓRIO)
+## 4. Requisitos
+
+Não é necessário nenhum conhecimento prévio de programação, pacotes estatísticos ou manejo de conjuntos de dados. O curso é recomendado para tanto alun@s que já têm alguma noção quanto para estudantes que morrem de medo de computadores. O objetivo é criar um ambiente confortável para o aprendizado de técnicas programação, independentemente da habilidade d@s inscrit@s, e seguindo todos os passos desde a preparação do ambiente de computação até a apresentação de resultados.
+
+É recomendado que @s alun@s inscrit@s já tenham concluído ou esteja cursando algum curso de métodos de pesquisa (de qualquer abordagem) ou de análise de dados, seja do programa ou da IPSA Summer School. É um curso adequado para estudantes em qualquer etapa do mestrado ou doutorado, desde que tenham disponibilidade para realizar as atividades extra-classe.
+
+Estudantes do DCP-USP que podem se matricular regularmente não serão aceit@s como ouvintes.
+
+## 5. Agenda
+
+A ser definina em breve.
+
+## 6. Tópicos (PROVISÓRIO)
 
 1. Básico da Programação em R
 2. Estruturas de dados e manipulação de bases em R
@@ -61,7 +77,7 @@ A avaliação é composta pela entrega dos desafios e de um projeto final de org
 10. Mapas e GIS
 11. Redes e grafos 
 
-## Bibliografia
+## 7. Bibliografia
 
 Jones, O., Maillardet, R., & Robinson, A. (2009). Introduction to Scientific Programming and Simulation Using R (1 edition). Boca Raton, FL: Chapman and Hall/CRC.
 Makhabel, B. (2015). Learning Data Mining with R. Packt Publishing Ltd.
