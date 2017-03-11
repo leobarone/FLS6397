@@ -1,0 +1,285 @@
+---
+title: "Básico da Linguagem e Data Frame"
+author: "Leonardo Sangali Barone"
+date: "March 13, 2017"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### Começando pelo meio: data frames
+
+Uma característica distintiva da linguagem de programação R é ter sido desenvolvida para a análise de dados. E quando pensamos em análise de dados, a protagonista do show é a _base de dados_ ou, como vamos conhecer a partir de agora, __data frame__.
+
+Por esta razão, em vez de aprender como fazer aritmética, elaborar funções ou executar loops para repetir tarefas e outros aspectos básicos da linguagem, vamos começar olhando para o R como um software concorrente dos demais utilizados para análise de dados em ciências sociais, como SPSS, Stata, SAS e companhia.
+
+As principais características de um data frame são: (1) cada coluna representa uma variável (ou característica) de um conjunto de observações; (2) cada linha representa um observação e contém os valores de cada variável para tal observação. Vejamos um exemplo:
+
+| Candidato | Partido | Votos | 
+| --------- |:-------:| -----:|
+| Beatriz   | PMDB    |   350 | 
+| Danilo    | SOL     |  1598 | 
+| Pedro     | PTB     |   784 | 
+| Davi      | PSD     |   580 | 
+| Mateus    | PV      |   2   | 
+
+Note que em uma linha os elementos são de tipos de diferentes: na primeira coluna há uma nome (texto), na segunda uma sigla de partido (texto, mas limitado a um conjunto de siglas) e na terceira votos (número inteiros). 
+
+Por outro lado, em cada coluna há somente elementos de um tipo. Por exemplo, há apenas números inteiros na coluna votos. Colunas são variáveis e por isso aceitam registros de um único tipo. Se você já fez um curso de estatísticas básica ou de métodos quantitativos deve se lembrar que as variáveis são classificadas da seguinte maneira:
+
+1- Discretas
+
+  - Nominais, que são categorias (normalmente texto) não ordenadas
+  
+  - Ordinais, que são categorias (normalmente texto) ordenadas
+  
+  - Inteiros, ou seja, o conjunto dos números inteiros
+
+2- Contínuas, números que podem assumir valores não inteiros
+
+Se destacamos uma coluna do nosso data frame, temos um __vetor__. Por exemplo, a variável "Votos" pode ser presentado da seguinte maneira: {350, 1598, 784, 580, 2}. Um data frame é um conjunto de variáveis (vetores) dispostos na vertical e combinados um ao lado do outro.
+
+Data frame e vetores são __objetos__ na linguagem R.
+
+Vamos ver como o R representa vetores e data frames na tela. Antes disso, é preciso "abrir" um data frame.
+
+### Pausa para pacotes
+
+Uma das características mais atrativas da linguagem R é o desenvolvimento de __pacotes__ pela comunidade de usuários. Pacotes são conjuntos de funções (aka comandos) e, por vezes, guardam também dados em diversos formatos.
+
+Vamos carregar um pacote chamado _datasets_, que contém diversos conjuntos de dados úteis para fins didáticos. Para carregar um pacote (e, portanto, tornar as funções disponíveis para uso naquela sessão de R) usamos a função _library_:
+
+```{r}
+library(datasets)
+```
+
+### De volta aos dataframes
+
+Com a função _data_ podemos carregar um conjunto de dados disponível na sua sessão de R. Utilizaremos a base _mtcars_, que contém dados da revista _Motor Trend US_ sobre características (variáveis!!!) de 32 automóveis (esse é um dos conjuntos de dados mais populares em cursos introdutórios de R).
+
+```{r}
+data(mtcars)
+```
+
+Pronto! Logo mais veremoscomo abrir conjuntos de dados de outras fontes (arquivos de texto, outros softwares, etc), mas já podemos começar a trabalhar com _data frames_.
+
+Antes de avançar, vamos usar o __help__ (documentação) do R para descobrir o que há no _data frame_ chamado _mtcars_:
+
+```{r}
+?mtcars
+```
+
+Você pode ler com calma antes de avançar.
+
+Se quiseremos olhar para os dados que acabamos de carregar utilizamos a função _View_ (com V maiúsculo, algo pouco usual em R):
+
+```{r}
+View(mtcars)
+```
+
+Com apenas 32 observações, não fica tão difícil "olhar" para os dados. Mas e se estívessemos trabalhando com, por exemplo, o total de candidatos vereadores no Brasil em 2016 (aprox. meio milhão de candidatos)? Seria útil utilizar o comando _View_?
+
+### Do editor de planilhas ao R - parte 1
+
+A partir desse ponto no curso vamos resistir à tentação de "olhar" para os dados. O hábito de quem utiliza com editores de planilha como MS Excel ou Libre Office, ou ainda com algums softwares de análise de dados como SPSS e Minitab, é trabalhar "olhando" para os dados, ou seja, para os valores de cada célula de uma base dados.
+
+Você perceberá em pouco tempo que isso não é necessário. Na verdade, é contraproducente. Nas primeiras aulas vamos nos munir de ferramentas que nos permitirão conhecer os dados sem olhá-los diretamente.
+
+### Head no lugar de View
+
+Por exemplo, podemos substituir a função _View_ pela função _head_. Veja o resultado:
+
+```{r}
+head(mtcars)
+```
+
+Com apenas as 6 primeiras linhas do _data frame_ temos noção de todo o conjunto. Sabemos rapidamente que os nomes dos carros são o nome de cada uma das linhas, e que o nome das colunas indicam qual característica está armazenada coluna (lembra-se da documentação de _mtcars_ que você acabou de ler).
+
+Alternativamente, podemos usar a função _str_ (atalho para "structure"):
+
+```{r}
+str(mtcars)
+```
+
+Com _str_ sabemos qual é a lista de variáveis (colunas) no _data frame_, de qual tipo são -- no caso, todas são numéricas e vamos falar sobre esse tema mais tarde -- e os primeiros valores de cada uma, além do número total de observações e variáveis mostrados no topo do __output__.
+
+Há outras maneiras de ver obter o número linhas e colunas de um _data frame_:
+
+```{r}
+nrow(mtcars)
+ncol(mtcars)
+dim(mtcars)
+```
+
+_nrow_ retorna o número de linhas; _ncol_, o de coluna; _dim_ as dimensões (na ordem linha e depois coluna) do objeto.
+
+_names_, por sua vez, retorna os nomes das variáveis do _data frame_
+
+```{r}
+names(mtcars)
+```
+
+### Parâmetros das funções
+
+Note que em todas as funções que utilizamos até agora, _mtcars_ está dentro do parêntesis que segue o nome da função. Essa __sintax__ é característica das funções de R. O que vai entre parêntesis são os __parâmetros__ da função, ou seja, os "inputs" que serão transformados.
+
+Uma função pode receber mais de um parâmetro. Pode também ter parâmetros não obrigatórios, ou seja, não é necessário informá-los se você não quiser alterar os valores pré-definidos. Por exemplo, a função _head_ contém o parâmetro _n_, que se refere ao número de linhas a serem __impressas__ na tela, pré-estabelecido em 6. Para alterá-lo para 10, por exemplo, basta fazer:
+
+```{r}
+head(mtcars, n = 10)
+```
+
+Dica: você pode omitir o "n =" e manter apenas o 10 depois da vírgula, se você já conhecer o nome do parâmetro.
+
+### Pausa para um comentário
+
+Podemos fazer comentários no meio do código. Basta usar # e tudo que seguir até o final da linha não será interpertado pelo R como código. Por exemplo:
+
+```{r}
+# Imprime o nome das variaveis do data frame mtcars
+names(mtcars)
+
+names(mtcars) # Repetindo o comando acima com comentario em outro lugar
+```
+
+Comentários são extremamente úteis para documentar seu código. Documentar é parte de programar e você deve pensar nas pessoas com as quais vai compartilhar o código e no fato de que com certeza não se lembrará do que fez em pouco tempo (garanto, você vai esquecer).
+
+### Construindo vetores e data frames
+
+Vamos esquecer o _data frame_ com o qual estávamos trabalhando até agora. Para remover um objeto do __Workspace__ fazemos:
+
+```{r}
+rm(mtcars)
+```
+
+Vamos fazer isso de forma menos entediante. Vamos montar um banco de dados de notícias.
+
+Escolha 2 jonais ou portais de notícias diferentes. Vá em cada um deles e colete 3 notícias. Em casa notícia, colete as seguintes informações:
+
+- Nome do jornal ou portal
+- Data da notícia (não precisa coletar a hora)
+- Título
+- Autor(a)
+- Número de palavras no texto (use o MS Word ou Libre Office se precisar - chute se tiver preguiça)
+- Marque 1 se a notícia for sobre política e 0 caso contrário
+- Marque 1 se a notícia for sobre esporte e 0 caso contrário
+- Marque TRUE se a notícia contiver vídeo e FALSE caso contrário
+
+Insira as informações nos vetores em ordem de coleta das notícias
+
+Com cada informação, vamos construir um vetor. Vejam meus exemplos. Começando col o nome do jornal ou portal:
+
+```{r}
+jornal <- c("The Guardian", "The Guardian", "The Guardian", "Folha de São Paulo", 
+            "Folha de São Paulo", "Folha de São Paulo")
+```
+
+Opa, calma! Temos um monte de coisas novas aqui!
+
+A primeira delas é: se você criou corretamente o vetor _jornal_, então nada aconteceu na sua tela, ou seja, nenhum output foi impresso. Isso se deve ao fato de que criamos um novo objeto, chamado _jornal_ e __atribuímos__ a ele os valores coletados sobre os nomes dos veículos nos quais coletamos as notícias. O símbolo de __atribuição__ em R é __<-__. Note que o símbolo lembra uma seta para a esquerda, indicando que o conteúdo do vetor será armazenado no objeto _jornal_.
+
+Posso usar o símbolo __=__ no lugar de __<-__. Sim. Funciona. Mas nem sempre e é uma fonte grande de confusão. Quando entendermos um pouco mais da sintaxe da linguagem R ficará claro.
+
+Se o objetivo fosse criar o vetor sem "guardá-lo" em um objeto, bastaria repetir a parte do código acima que começa após o símbolo de aribuição. _c_ "concatenate" é a função do R que combina valores de texto, número ou lógicos (ainda não falamos destes últimos) em um vetor. É um função muito utilizada ao programar em R.
+
+```{r}
+c("The Guardian", "The Guardian", "The Guardian", "Folha de São Paulo",
+  "Folha de São Paulo", "Folha de São Paulo")
+```
+
+Note que há uma quebra de linha no código. Não há problema algum. Uma vez que o parêntese que indica o fim do vetor não foi encontrado, o R entende o que estiver na próxima como continuidade do código (e, portanto, do vetor). Dica: quebras de linha ajudam a vizualizar o código e com o tempo você também usará.
+
+Vamos seguir com nossa tarefa de criar vetores. Já temos o vetor jornal (que você pode observar no workspace). Os demais, na minha coleta de dados, estão a seguir:
+
+```{r}
+# Data
+# Obs: ha uma funcao em R com nome "data".
+# Evite dar a objetos nome de funcoes
+date <- c("10/03/2017", "10/03/2017", "10/03/2017", "10/03/2017", "10/03/2017", "10/03/2017")
+
+# Titulo
+titulo <- c("'Trump lies all the time': Bernie Sanders indicts president's assault on democracy",
+            "Bruno, still guilty of murder but bafflingly welcome to walk back into football",
+            "BBC interviewee interrupted by his children live on air – video",
+            "Bolsista negra é hostilizada em atividade no campus da FGV de SP",
+            "Meninas podem ser o que quiserem, inclusive matemáticas",
+            "Favela de Paraisópolis tem novo incêndio em menos de dez dias")
+
+# Autor
+autor <- c("Ed Pilkington ", "Barney Ronay", NA, "Joana Cunha; Jairo Marques", "Marcelo Viana", NA)
+
+# Numero de caracteres
+caracteres <- c(5873, 6301, 358, 3644, 4086, 3454)
+
+# Conteudo sobre politica
+politica <- c(1, 0, 0, 0, 0, 0)
+
+# Conteudo sobre esporte
+esporte <- c(0, 1, 0, 0, 0, 0)
+
+# Contem video
+video <- c(FALSE, FALSE, TRUE, FALSE, FALSE, TRUE)
+```
+
+Para onde vão os objetos de R criados? Para o workspace.
+
+Se quisermos uma fotografia do nosso workspace, usamos a função _ls_, com parêntese vazio (ou seja, sem parâmetros além dos pré-estabelecidos):
+
+```{r}
+ls()
+```
+
+### Detalhes importantes nos vetores acima
+
+Mais alguns detalhes importantes a serem notados no exemplo acima:
+
+- O formato da data foi arbitrariamente escolhido. Por enquanto, o R entende apenas como texto o que foi inserido. No datas são especialmente chatas de se trabalhar e há funções específicas para tanto.
+- Os textos foram inseridos entre aspas. Os números, não. Se números forem inseridos com aspas o R os entenderá como número também.
+- Além de textos e números, temos no vetor _vídeo_ valores lógicos, TRUE e FALSE. _logical_ é um tipo de dado do R (e é particularmente importante).
+- O texto do primeiro título que coletei contém aspas. Como colocar aspas dentro de aspas sem fazer confusão? Se você delimitou o texto com aspas duplas, use aspas simples no texto e vice-versa.
+- O que são os _NA_ no meio do vetor _autor_? Quando coletei as notícias, não consegui identificar o autor(a) de algumas (eram notícias da redação). _NA_ é o símbolo do R para __missing values__ e lidar com eles é uma das grandes chatices em R.
+
+### Criando um data frame com vetores:
+
+Como vimos acima, _data frames_ são um conjunto de vetores horizontais. Se você introduziu os valores em cada vetor na ordem correta de coleta dos dados, então eles podem ser __pareados__ e __combinados__. No meu exemplo, a primeira posição de cada vetor contém as informações sobre a primeira notícia, a segunda posição sobre a segunda notícia e assim por diante. 
+
+Obviamente, se estiverem pareados, os vetores devem ter o mesmo comprimento. Há uma função bastante útil para checar o comprimento:
+
+```{r}
+length(jornal)
+```
+
+Vamos criar com os vetores que construímos um _data frame_ com o nome _dados_. Vamos produzí-lo, discutir a função _data.frame_ e depois examiná-lo:
+
+```{r}
+dados <- data.frame(jornal, date, titulo, autor, caracteres, politica, esporte, video)
+```
+
+A função _data.frame_ cria um _data frame_ a partir de vetores ou matrizes (que ainda não vimos). Quando criamos a partir de vetores, automaticamente os nomes das variáveis (colunas) no novo objeto serão os nomes dos vetores. Mas poderíamos querer nomes novos (por exemplo, em inglês). Bastaria fazer:
+
+```{r}
+dados <- data.frame(newspaper = jornal, 
+                    date = date, 
+                    title = titulo, 
+                    author = autor, 
+                    n_char = caracteres, politica, esporte, video)
+```
+
+Usando as funções que aprendemos nessa aula:
+
+```{r}
+# 6 primeiras (e unicas, no caso) linhas
+head(dados)
+
+# Estrutura do data frame
+str(dados)
+
+# Nome das variaveis
+names(dados)
+
+# Dimensoes do data frame
+dim(dados)
+```
+
