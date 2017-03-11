@@ -86,7 +86,7 @@ A ser definina em breve.
 - Teetor, P. (2011). R Cookbook: Proven Recipes for Data Analysis, Statistics, and Graphics. O’Reilly Media, Inc.
 - Wickham, Hadley. ggplot2: Elegant Graphics for Data Analysis. Springer-Verlag New York, 2009.
 - Wickham, Hadley and Francois, Romain (2016). dplyr: A Grammar of Data Manipulation. R package version 0.5.0. https://CRAN.R-project.org/package=dplyr
-- Zuur, A., Ieno, E. N., & Meesters, E. (2009). A Beginner’s Guide to R (2009 edition). Dordrecht ; New York: Springer.
+- Zuur, A., Ieno, E. N., & Meesters, E. (2009). A Beginner’s Guide to R (2009 edition). Dordrecht.; New York: Springer.
 
 ## Ferramentas
 - Barone, Leonardo Sangali, Aslan, Alexia and McDonnell, Robert Myles  (2016). bRasilLegis: R Tools for Brazilian Chamber of Deputies (Camara Dos Deputados) Data. R package version 1.0. https://CRAN.R-project.org/package=bRasilLegis
