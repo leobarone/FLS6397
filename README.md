@@ -5,7 +5,7 @@ Leonardo S. Barone e Fernando Limongi
 
 ## Apresentação
 
-O curso oferece aos estudantes de pós-graduação em ciências sociais uma iniciação à lógica de programação e ao uso ferramentas computacionais para (1) coleta (2) organização e preparação e (3) apresentação de dados para pesquisa social. O foco do curso é o desenvolvimento da habilidade de programação para solução de problemas diversos relacionados ao manejo de dados com fins de pesquisa. Note-se que não é um curso de metodologia de pesquisa, análise de dados ou de ciências sociais computacionais.
+O curso oferece aos estudantes de pós-graduação em ciências sociais uma iniciação à lógica de programação e ao uso de ferramentas computacionais para (1) coleta (2) organização e preparação e (3) apresentação de dados para pesquisa social. O foco do curso é o desenvolvimento da habilidade de programação para solução de problemas diversos relacionados ao manejo de dados com fins de pesquisa. Note-se que não é um curso de metodologia de pesquisa, análise de dados ou de ciências sociais computacionais.
 
 Este curso pretende preencher uma lacuna de formação comum em alun@s de pós-graduação em ciências sociais referente à habilidade de lidar com dados e ferramentas computacionais para a condução de suas pesquisas.
 

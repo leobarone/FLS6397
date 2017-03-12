@@ -283,3 +283,8 @@ names(dados)
 dim(dados)
 ```
 
+### Tipos de dados em R
+
+Usando o que aprendemos sobre vetores, vamos examinar com cuidado os tipos de dados que podem ser armazenados em vetores:
+__doubles__, __integers__, __characters__, __logicals__, __complex__, e __raw__. Para nós 
+

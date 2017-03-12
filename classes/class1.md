@@ -22,10 +22,10 @@ Nesta aula vamos discutir o funcionamento do curso, definir os tópicos avançad
 
 Como estamos inciando com a linguagem R, ainda não teremos nenhuma atividade de avaliação ou desafio para o intervalo entre a 1a e 2a semana. Vamos investir em aprender as espcíficidades da linguagem lendo um livro básico de programação em R.
 
-A tarefa para a semana, portanto, é começar a ler o livro "Hands-on Programming With R", de Garret Grolemund. Obrigatoriamente, você deve ler o Prefácio e os Capítulos 1 e 2, que compõem a Part I. Idealmente, seria bom avançar nos capítulos da Part II (3 a 6), mesmo sem terminá-los nesta semana (tente ler pelo menos o Capítulo 3). Use como critério de parada o seu limite de compreensão. Em breve leremos a Parte III também, então se organize para ler o livro em até 3 semanas (aprox. 60 páginas por semana).
+A tarefa para a semana, portanto, é começar a ler o livro _Hands-on Programming With R_, de Garret Grolemund. Obrigatoriamente, você deve ler o Prefácio e os Capítulos 1 e 2, que compõem a Part I. Idealmente, seria bom avançar nos capítulos da Part II (3 a 6), mesmo sem terminá-los nesta semana (tente ler pelo menos o Capítulo 3). Use como critério de parada o seu limite de compreensão. Em breve leremos a Parte III também, então se organize para ler o livro em até 3 semanas (aprox. 60 páginas por semana).
 
 Durante a leitura, não se preocupe se você sentir dificuldade em algum tópico. Os primeiros tutoriais que faremos em sala de aula lidam com a maior parte dos tópicos do livro. Ademais, é a primeira vez que passo leitura para casa em um curso de R e na segunda aula discutiremos o quão proveitoso/difícil foi a tarefa para recalcular a rota.
 
-### Recursos para auto-estudo
+### Recurso para auto-estudo
 
 Há vários materiais, tutoriais e cursos sobre R gratuitos produzidos nos últimos anos. É realmente difícil escolher um para começar. Minha sugestão para quem estiver perdid@ e quiser estudar um pouco mais é fazer o curso "[Introduction to R] (https://www.datacamp.com/courses/free-introduction-to-r)" no site Datacamp. Esse é o material que costumo sugerir como "nivelamento" antes de oficinas de R.
