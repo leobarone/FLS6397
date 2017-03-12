@@ -121,17 +121,17 @@ _names_, por sua vez, retorna os nomes das variáveis do _data frame_
 names(mtcars)
 ```
 
-### Parâmetros das funções
+### Argumentos ou parâmetros das funções
 
-Note que em todas as funções que utilizamos até agora, _mtcars_ está dentro do parêntesis que segue o nome da função. Essa __sintax__ é característica das funções de R. O que vai entre parêntesis são os __parâmetros__ da função, ou seja, os "inputs" que serão transformados.
+Note que em todas as funções que utilizamos até agora, _mtcars_ está dentro do parêntesis que segue o nome da função. Essa __sintax__ é característica das funções de R. O que vai entre parêntesis são os __argumentos__ ou __parâmetros__ da função, ou seja, os "inputs" que serão transformados.
 
-Uma função pode receber mais de um parâmetro. Pode também ter parâmetros não obrigatórios, ou seja, não é necessário informá-los se você não quiser alterar os valores pré-definidos. Por exemplo, a função _head_ contém o parâmetro _n_, que se refere ao número de linhas a serem __impressas__ na tela, pré-estabelecido em 6. Para alterá-lo para 10, por exemplo, basta fazer:
+Uma função pode receber mais de um argumento Pode também ter argumentos não obrigatórios, ou seja, não é necessário informá-los se você não quiser alterar os valores pré-definidos. Por exemplo, a função _head_ contém o argumento _n_, que se refere ao número de linhas a serem __impressas__ na tela, pré-estabelecido em 6 (você pode conhecer os argumentos da função na documentação do R (usando _?_ antes do nome da função). Para alterá-lo para 10, por exemplo, basta fazer:
 
 ```{r}
-head(mtcars, n = 10)
+head(x = mtcars, n = 10)
 ```
 
-Dica: você pode omitir o "n =" e manter apenas o 10 depois da vírgula, se você já conhecer o nome do parâmetro.
+_x_ é o argumento que já havíamos utilizado anteriormente e indica em que objeto a função _head_ será aplicada. Dica: você pode omitir tanto "x =" quanto "n =" se você já conhecer a ordem de cada argumento no uso da função. Veja que neste caso estamos utilizando o símbolo "=" sem fazer a atribuição de dados a um objeto, mas para atribuir valores (ou objetos) aos argumento de uma função. Para não haver confusão é preferível usar o símbolo "<-" para atribuição e o "=" para as demais situações.
 
 ### Pausa para um comentário
 
@@ -178,9 +178,11 @@ jornal <- c("The Guardian", "The Guardian", "The Guardian", "Folha de São Paulo
 
 Opa, calma! Temos um monte de coisas novas aqui!
 
-A primeira delas é: se você criou corretamente o vetor _jornal_, então nada aconteceu na sua tela, ou seja, nenhum output foi impresso. Isso se deve ao fato de que criamos um novo objeto, chamado _jornal_ e __atribuímos__ a ele os valores coletados sobre os nomes dos veículos nos quais coletamos as notícias. O símbolo de __atribuição__ em R é __<-__. Note que o símbolo lembra uma seta para a esquerda, indicando que o conteúdo do vetor será armazenado no objeto _jornal_.
+A primeira delas é: se você criou corretamente o vetor _jornal_, então nada aconteceu na sua tela, ou seja, nenhum output foi impresso. Isso se deve ao fato de que criamos um novo __objeto__, chamado _jornal_ e __atribuímos__ a ele os valores coletados sobre os nomes dos veículos nos quais coletamos as notícias. O símbolo de __atribuição__ em R é __<-__. Note que o símbolo lembra uma seta para a esquerda, indicando que o conteúdo do vetor será armazenado no objeto _jornal_.
 
-Posso usar o símbolo __=__ no lugar de __<-__. Sim. Funciona. Mas nem sempre e é uma fonte grande de confusão. Quando entendermos um pouco mais da sintaxe da linguagem R ficará claro.
+Objetos não são nada mais do que um nome usado para armazenar dados na memória RAM (temporária) do seu computador. No exemplo acima, _jornal_ é o objeto e o vetor é a informação armazenada. Uma vez criado, o objeto está disponível para ser usado novamente, pois ele ficará disponível no __workspace__. Veremos adiante que podemos criar um _data frame_ a partir de vários vetores armazenados na memória e como examinar o conteúdo do _workspace_. Especificamente no RStudio, os objetos ficam disponíveis na no painel _environment_ (que provavelmente está no canto esquerdo superior da sua tela).
+
+Posso usar o símbolo __=__ no lugar de __<-__? Sim. Funciona. Mas nem sempre e é uma fonte grande de confusão. Quando entendermos um pouco mais da sintaxe da linguagem R ficará claro.
 
 Se o objetivo fosse criar o vetor sem "guardá-lo" em um objeto, bastaria repetir a parte do código acima que começa após o símbolo de aribuição. _c_ "concatenate" é a função do R que combina valores de texto, número ou lógicos (ainda não falamos destes últimos) em um vetor. É um função muito utilizada ao programar em R.
 
@@ -223,9 +225,7 @@ esporte <- c(0, 1, 0, 0, 0, 0)
 video <- c(FALSE, FALSE, TRUE, FALSE, FALSE, TRUE)
 ```
 
-Para onde vão os objetos de R criados? Para o workspace.
-
-Se quisermos uma fotografia do nosso workspace, usamos a função _ls_, com parêntese vazio (ou seja, sem parâmetros além dos pré-estabelecidos):
+Para onde vão os objetos de R criados? Para o workspace. Se quisermos uma fotografia do nosso workspace, usamos a função _ls_, com parêntese vazio (ou seja, sem argumentos além dos pré-estabelecidos):
 
 ```{r}
 ls()
