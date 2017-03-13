@@ -236,7 +236,7 @@ ls()
 Mais alguns detalhes importantes a serem notados no exemplo acima:
 
 - O formato da data foi arbitrariamente escolhido. Por enquanto, o R entende apenas como texto o que foi inserido. Datas são especialmente chatas de se trabalhar e há funções específicas para tanto.
-- Os textos foram inseridos entre aspas. Os números, não. Se números forem inseridos com aspas o R os entenderá como número também.
+- Os textos foram inseridos entre aspas. Os números, não. Se números forem inseridos com aspas o R os entenderá como texto também.
 - Além de textos e números, temos no vetor _vídeo_ valores lógicos, TRUE e FALSE. _logical_ é um tipo de dado do R (e é particularmente importante).
 - O texto do primeiro título que coletei contém aspas. Como colocar aspas dentro de aspas sem fazer confusão? Se você delimitou o texto com aspas duplas, use aspas simples no texto e vice-versa.
 - O que são os _NA_ no meio do vetor _autor_? Quando coletei as notícias, não consegui identificar o autor(a) de algumas (eram notícias da redação). _NA_ é o símbolo do R para __missing values__ e lidar com eles é uma das grandes chatices em R.
