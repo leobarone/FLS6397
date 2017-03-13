@@ -26,6 +26,12 @@ A tarefa para a semana, portanto, é começar a ler o livro _Hands-on Programmin
 
 Durante a leitura, não se preocupe se você sentir dificuldade em algum tópico. Os primeiros tutoriais que faremos em sala de aula lidam com a maior parte dos tópicos do livro. Ademais, é a primeira vez que passo leitura para casa em um curso de R e na segunda aula discutiremos o quão proveitoso/difícil foi a tarefa para recalcular a rota.
 
+### Exercício de correção de erros
+
+Em todas as aulas vou preparar exercícios de "correção de erros" para casa. Em outras palavras, vou escrever códigos com erros para vocês corrigirem como forma de se acostumarem com a linguagem. Clique abaixo para ir para o primeiro
+
+[Exercício de correção de erros 1] (https://github.com/leobarone/FLS6397/blob/master/tutorials/tutorial_20160313.Rmd)
+
 ### Recurso para auto-estudo
 
 Há vários materiais, tutoriais e cursos sobre R gratuitos produzidos nos últimos anos. É realmente difícil escolher um para começar. Minha sugestão para quem estiver perdid@ e quiser estudar um pouco mais é fazer o curso "[Introduction to R] (https://www.datacamp.com/courses/free-introduction-to-r)" no site Datacamp. Esse é o material que costumo sugerir como "nivelamento" antes de oficinas de R.
