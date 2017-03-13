@@ -283,8 +283,72 @@ names(dados)
 dim(dados)
 ```
 
-### Tipos de dados em R
+### Tipos de dados em R e vetores
 
 Usando o que aprendemos sobre vetores, vamos examinar com cuidado os tipos de dados que podem ser armazenados em vetores:
-__doubles__, __integers__, __characters__, __logicals__, __complex__, e __raw__. Para nós 
+__doubles__, __integers__, __characters__, __logicals__, __complex__, e __raw__. Neste tutorial, vamos examinar os 3 mais comumente usados na análise de dados: _doubles_, _characters_, _logicals_.
 
+#### Doubles
+
+_doubles_ são utilizados para guardar números. Por exemplo, o vetor _caracteres_, que indica o número de caracteres em cada texto, é do tipo _double_ (ops, desculpe por criar um vetor com este nome para números!). Vamos repetir o comando que cria este vetor:
+
+```{r}
+caracteres <- c(5873, 6301, 358, 3644, 4086, 3454)
+```
+
+Com a função _typeof_ você consegue descobrir o tipo de cada vetor:
+
+```{r}
+typeof(caracteres)
+```
+
+É possível fazer operações com vetores númericos (_integers_ também são vetores numéricos, mas vamos esquecer deles por um segundo e fazer _double_ sinônimo de numérico). Por exemplo, podemos somar 1 a todos os seus elementos, dobrar o valor de cada elemento ou somar todos:
+
+```{r}
+caracteres + 1
+caracteres * 2
+sum(caracteres)
+```
+
+Note que as duas primeiras funções retornam vetores de tamanho igual ao original, enquanto a aplicação da função _sum_ a um vetor retorna apenas um número, ou melhor, um __vetor atômico__ (que contém um único elemento). Tal como aplicamos as operações matemáticas e a função _sum_, podemos aplicar diversas outras operações matemáticas e funções que sumarizam os dados (média, desvio padrão, etc) a vetores numéricos. Veremos operações e funções com calma num futuro breve.
+
+#### Logicals
+
+Os vetores _politica_ e _esporte_ também são do tipo _double_. Mesmo registrando apenas a presença e ausência de uma característica, os valores inseridos são números. Mas e o vetor _video_? Vejamos:
+
+```{r}
+typeof(politica)
+typeof(esporte)
+typeof(video)
+```
+
+Em vez de armazenarmos a sim/não, presença/ausência, etc com os números 0 e 1, podemos em R usar o tipo _logical_, cujos valores são TRUE e FALSE (ou T e F maiúsculos, para poupar tempo e dígitos). Diversas operações e resultados no R usam vetores lógicos (por exemplo, "filtrar uma base dados") e os utilizaremos com frequência.
+
+O que acontece se fizermos operações matemáticas com vetores lógicos?
+
+```{r}
+video + 1
+sum(video)
+```
+
+Automaticamente, o R transforma FALSE em 0 e TRUE em 1. Por exemplo, ao somar 4 FALSE e 2 TRUE obtemos o valor 2, que é o total de notícias que contêm vídeos.
+
+#### Character
+
+Finalmente, vetores que contêm texto são do tipo _character_. O nome dos jornais, data, título e autor são informações que foram inseridas como texto (lembre-se, o R não sabe por enquanto que no vetor _date_ há uma data). Operações matemáticas não valem pare estes vetores.
+
+### Tipo e classe
+
+Veremos em momento oportuno que os objetos em R também tem um atributo denominado __class__. A classe diz respeito às características dos objetos enquanto tipo diz respeito ao tipo de dado armazenado. No futuro ignoraremos o tipo e daremos mais atenção à classe, mas é sempre bom saber distinguir os tipos de dados que podemos inserir na memória do computador usando R.
+
+### Abrindo dados de fontes externas
+
+R é uma linguagem extremamente flexível quanto ao formato de dados que podem ser abertos. Comumente, utilizaremos dados provenientes de arquivos de texto (.txt, .csv, .tab, etc) ou de arquivos de excel transformados em arquivos de texto. Mas estas estão longe de serem as únicas possibilidades.
+
+Com o pacote _foreign_ abriremos arquivos produzidos por outros softwares -- como Stata e SPSS. Podemos também conectar o R a sistemas de gerenciamento de bancos de dados relacionais, como o SQL Server. Finalmente, podemos receber via web arquivos em formato XML ou Json e transformá-los em _data frames_ em poucos passos.
+
+Vamos começar com o exemplo simples. Baixe os dados com resultados eleitorais (votação nominal por município e zona) do Acre em 2014 disponíveis [aqui] . Estes dados são provenientes do [Repositório de Dados Eleitorais] (http://www.tse.jus.br/eleicoes/estatisticas/repositorio-de-dados-eleitorais) do TSE. O Tribunal disponibiliza para cada ano eleitoral arquivos por UF em formato de texto (.txt) e numa pasta comprimida em formato .zip.
+
+Diferentemente de outros softwares, no R a "interface Windows", aka "menus e janelas", não oferece a possibilidade executar funções. Porém, na aba environment há um botão muito útil chamado "Import Dataset", que serve para importar para o _workspace_ arquivos em qualquer formato de texto ("From CSV"), MS Excel, Stata, SAS e SPSS.
+
+Use o botão e a janela para chegar ao querivo 
