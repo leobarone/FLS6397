@@ -347,8 +347,8 @@ R é uma linguagem extremamente flexível quanto ao formato de dados que podem s
 
 Com o pacote _foreign_ abriremos arquivos produzidos por outros softwares -- como Stata e SPSS. Podemos também conectar o R a sistemas de gerenciamento de bancos de dados relacionais, como o SQL Server. Finalmente, podemos receber via web arquivos em formato XML ou Json e transformá-los em _data frames_ em poucos passos.
 
-Vamos começar com o exemplo simples. Baixe os dados com resultados eleitorais (votação nominal por município e zona) do Acre em 2014 disponíveis [aqui] . Estes dados são provenientes do [Repositório de Dados Eleitorais] (http://www.tse.jus.br/eleicoes/estatisticas/repositorio-de-dados-eleitorais) do TSE. O Tribunal disponibiliza para cada ano eleitoral arquivos por UF em formato de texto (.txt) e numa pasta comprimida em formato .zip.
+Vamos começar com o exemplo simples. Baixe os dados com resultados eleitorais (votação nominal por município e zona) do Acre em 2014 disponíveis [aqui] (https://raw.githubusercontent.com/leobarone/FLS6397/master/data/votacao_candidato_munzona_2014_AC.txt). Estes dados são provenientes do [Repositório de Dados Eleitorais] (http://www.tse.jus.br/eleicoes/estatisticas/repositorio-de-dados-eleitorais) do TSE. O Tribunal disponibiliza para cada ano eleitoral arquivos por UF em formato de texto (.txt) e numa pasta comprimida em formato .zip.
 
 Diferentemente de outros softwares, no R a "interface Windows", aka "menus e janelas", não oferece a possibilidade executar funções. Porém, na aba environment há um botão muito útil chamado "Import Dataset", que serve para importar para o _workspace_ arquivos em qualquer formato de texto ("From CSV"), MS Excel, Stata, SAS e SPSS.
 
-Use o botão e a janela para chegar ao querivo 
+Use o botão e a janela para chegar ao arquivo 
