@@ -180,11 +180,11 @@ Opa, calma! Temos um monte de coisas novas aqui!
 
 A primeira delas é: se você criou corretamente o vetor _jornal_, então nada aconteceu na sua tela, ou seja, nenhum output foi impresso. Isso se deve ao fato de que criamos um novo __objeto__, chamado _jornal_ e __atribuímos__ a ele os valores coletados sobre os nomes dos veículos nos quais coletamos as notícias. O símbolo de __atribuição__ em R é __<-__. Note que o símbolo lembra uma seta para a esquerda, indicando que o conteúdo do vetor será armazenado no objeto _jornal_.
 
-Objetos não são nada mais do que um nome usado para armazenar dados na memória RAM (temporária) do seu computador. No exemplo acima, _jornal_ é o objeto e o vetor é a informação armazenada. Uma vez criado, o objeto está disponível para ser usado novamente, pois ele ficará disponível no __workspace__. Veremos adiante que podemos criar um _data frame_ a partir de vários vetores armazenados na memória. Especificamente no RStudio, os objetos ficam disponíveis na no painel _environment_ (que provavelmente está no canto direito superior da sua tela).
+Objetos não são nada mais do que um nome usado para armazenar dados na memória RAM (temporária) do seu computador. No exemplo acima, _jornal_ é o objeto e o vetor é a informação armazenada. Uma vez criado, o objeto está disponível para ser usado novamente, pois ele ficará disponível no __workspace__. Veremos adiante que podemos criar um _data frame_ a partir de vários vetores armazenados na memória. Especificamente no RStudio, os objetos ficam disponíveis no painel _environment_ (que provavelmente está no canto direito superior da sua tela).
 
-Posso usar o símbolo __=__ no lugar de __<-__? Sim. Funciona. Mas nem sempre e esta substituição é uma fonte grande de confusão. Quando entendermos um pouco mais da sintaxe da linguagem R ficará claro.
+Posso usar o símbolo __=__ no lugar de __<-__? Sim. Funciona. Mas nem sempre funciona e esta substituição é uma fonte grande de confusão. Quando entendermos um pouco mais da sintaxe da linguagem R ficará claro.
 
-Se o objetivo fosse criar o vetor sem "guardá-lo" em um objeto, bastaria repetir a parte do código acima que começa após o símbolo de aribuição. _c_ ( do inglês "concatenate") é a função do R que combina valores de texto, número ou lógicos (ainda não falamos destes últimos) em um vetor. É um função muito utilizada ao programar em R.
+Se o objetivo fosse criar o vetor sem "guardá-lo" em um objeto, bastaria repetir a parte do código acima que começa após o símbolo de atribuição. _c_ ( do inglês "concatenate") é a função do R que combina valores de texto, número ou lógicos (ainda não falamos destes últimos) em um vetor. É um função muito utilizada ao programar em R.
 
 ```{r}
 c("The Guardian", "The Guardian", "The Guardian", "Folha de São Paulo",
@@ -403,17 +403,17 @@ names(votacao_candidato_munzona_2014_AC)
 
 Onde obter essa informação? No caso do TSE, no arquivo LEIAME. Em geral, precisamos de um arquivo que acompanhe o arquivo de dados para compreender a base de dados. Ou teremos que advinhar.
 
-No próximo tutorial aprenderemos a transformar o _data frame_.
+No próximo tutorial aprenderemos a transformar o _data frame_ e alterar os nomes das variáveis.
 
 ## Colunas como vetores
 
-Uma que importamos os dados, podemos trabalhar com as colunas do _data frame_ como se fossem vetores. Por exemplo, vamos tirar a média (com a função _mean_) da coluna V29, que é a coluna "votos" -- no caso, de cada candidato em cada zona eleitoral. Veja:
+Uma vez que importamos os dados, podemos trabalhar com as colunas do _data frame_ como se fossem vetores. Por exemplo, vamos tirar a média (com a função _mean_) da coluna V29, que é a coluna "votos" -- no caso, de cada candidato em cada zona eleitoral. Veja:
 
 ```{r, error=TRUE}
 mean(V29)
 ```
 
-Opa! O vetor V29 não foi encontrado! Isso ocorre porque V29 não é um objeto no nosso _workspace_. Como podemos ter mais de um _data frame_, se houvesse dois _data frames_ com variáveis nomeadas V29, haveria confusão. O vetor com o qual queremos trabalhar está dentro do objeto _votacao\_candidato\_munzona\_2014\_AC_. Indicamos isso colocando primeiro o nome do _data frame_, seguido do símbolo $, e depois do nome da coluna:
+Opa! O vetor V29 não foi encontrado! Isso ocorre porque V29 não é um objeto no nosso _workspace_. Como podemos ter mais de um _data frame_, se houvesse dois _data frames_ com variáveis com nome V29 haveria confusão. O vetor com o qual queremos trabalhar está dentro do objeto _votacao\_candidato\_munzona\_2014\_AC_. Indicamos sua localização colocando primeiro o nome do _data frame_, seguido do símbolo $ e depois do nome da coluna:
 
 ```{r, error=TRUE}
 mean(votacao_candidato_munzona_2014_AC$V29)
