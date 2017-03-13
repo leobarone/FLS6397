@@ -1,3 +1,4 @@
+
 #  FLS 6397 - Introdução à Programação e Ferramentas Computacionais para as Ciências Sociais
 
 - Responsável: Leonardo S. Barone
@@ -30,7 +31,7 @@ Durante a leitura, não se preocupe se você sentir dificuldade em algum tópico
 
 Em todas as aulas vou preparar exercícios de "correção de erros" para casa. Em outras palavras, vou escrever códigos com erros para vocês corrigirem como forma de se acostumarem com a linguagem. Clique abaixo para ir para o primeiro
 
-[Exercício de correção de erros 1] (https://github.com/leobarone/FLS6397/blob/master/tutorials/tutorial_20160313.Rmd)
+[Fix the code 1] (https://github.com/leobarone/FLS6397/blob/master/activities/fixthecode1.md)
 
 ### Recurso para auto-estudo
 
