@@ -16,7 +16,7 @@ Nesta aula vamos discutir o funcionamento do curso, definir os tópicos avançad
 
 2- A seguir, teremos uma rápida exposição sobre o ambiente R e o RStudio.
 
-3- A primeira experiência de programação no curso será com o Tutorial 1: [versão web] (https://github.com/leobarone/FLS6397/blob/master/tutorials/tutorial_20160313.Rmd) (sem outputs) ou [versão pdf] (https://github.com/leobarone/FLS6397/blob/master/tutorials/tutorial_20160313.pdf)
+3- A primeira experiência de programação no curso será com o Tutorial 1: [versão web](https://github.com/leobarone/FLS6397/blob/master/tutorials/tutorial_20160313.Rmd) (sem outputs) ou [versão pdf](https://github.com/leobarone/FLS6397/blob/master/tutorials/tutorial_20160313.pdf)
 (com outputs). Diferentemente de cursos convencionais de R, nos quais se apresenta primeiro R como lingaugem de programação, vamos começar com aquilo que é distintivo em R, que é sua vocação para análise de dados. Em particular, vamos começar trabalhando com _data frames_, que são as matrizes de dados.
 
 ### Roteiro pós-aula
