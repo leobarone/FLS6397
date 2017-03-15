@@ -31,8 +31,8 @@ Durante a leitura, não se preocupe se você sentir dificuldade em algum tópico
 
 Em todas as aulas vou preparar exercícios de "correção de erros" para casa. Em outras palavras, vou escrever códigos com erros para vocês corrigirem como forma de se acostumarem com a linguagem. Clique abaixo para ir para o primeiro
 
-[Fix the code 1] (https://github.com/leobarone/FLS6397/blob/master/activities/fixthecode1.md)
+[Fix the code 1](https://github.com/leobarone/FLS6397/blob/master/activities/fixthecode1.md)
 
 ### Recurso para auto-estudo
 
-Há vários materiais, tutoriais e cursos sobre R gratuitos produzidos nos últimos anos. É realmente difícil escolher um para começar. Minha sugestão para quem estiver perdid@ e quiser estudar um pouco mais é fazer o curso "[Introduction to R] (https://www.datacamp.com/courses/free-introduction-to-r)" no site Datacamp. Esse é o material que costumo sugerir como "nivelamento" antes de oficinas de R.
+Há vários materiais, tutoriais e cursos sobre R gratuitos produzidos nos últimos anos. É realmente difícil escolher um para começar. Minha sugestão para quem estiver perdid@ e quiser estudar um pouco mais é fazer o curso "[Introduction to R](https://www.datacamp.com/courses/free-introduction-to-r)" no site Datacamp. Esse é o material que costumo sugerir como "nivelamento" antes de oficinas de R.
