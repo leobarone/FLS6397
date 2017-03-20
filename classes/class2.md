@@ -13,6 +13,8 @@ Ignoraremos temporariamente alguns tópicos importantes: _data frames_, ao qual 
 
 ### Roteiro para a aula
 
+No início da aula, conversaremos sobre a dificuldade das leituras da primeira semana. Por favor, sejam extremamente sinceros e relatem se tiverem tido dificuldade(s). Se puderem, me digam quantas horas gastaram com a leitura e os exercícios.
+
 1- Comece pelo Tutorial 2 assim que chegar em sala de aula ([versão web](https://github.com/leobarone/FLS6397/blob/master/tutorials/tutorial2.Rmd) (sem outputs) ou [versão pdf](https://github.com/leobarone/FLS6397/blob/master/tutorials/tutorial2.pdf). 
 (com outputs). Siga o seu próprio ritmo.
 
