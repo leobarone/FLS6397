@@ -9,11 +9,9 @@ output: pdf_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-# O básico do R
+# Começando do zero - O básico do R
 
-## Começando do zero
-
-No tutorial anterior, começamos "do meio", ou seja, fizemos a primeira incursão na linguagem R aprendendo um pouco sobre _data frames_. Vamos, no presente tutorial, "começar do zero", ou seja, aprender sobre os aspectos elementares da linguagem R para, na etapa seguinte, aprender um pouco mais sobre _data frames_ e, então, avançar para aspectos mais complexos da linguagem.
+No tutorial anterior, começamos "do meio", ou seja, fizemos a primeira incursão na linguagem R aprendendo um pouco sobre _data frames_. Vamos, no presente tutorial, "começar do zero" e aprender sobre os aspectos elementares da linguagem R para, na etapa seguinte, avançar nosso conhecimento sobre _data frames_ e demais aspectos da linguagem.
 
 ## Operações matemáticas e vetores atômicos
 
