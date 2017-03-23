@@ -75,12 +75,33 @@ Use as funções que acabamos de ver para gerenciar caminhos de pastas no R. Val
 
 ## read.table
 
-Voltando à função _read.table_, vamos examinar os argumentos seguintes a _file_ usando um exemplo de dados
+Voltando à função _read.table_, vamos examinar os argumentos seguintes a _file_ usando um exemplo de dados retirado do Portal da Transparência. Extraí dos pagamentos do programa uma amostra de tamanho 10 e salvei em diversos arquivos com caracteristicas distintas.
 
+Para facilitar nossa vida, vamos usar como argumento "file" o endereço dos dados no repositório do curso. O primeiro arquivo está no enderço que guardaremos em "file1".
 
+```{r}
+file1 <- "https://raw.githubusercontent.com/leobarone/FLS6397/master/data/bf_amostra_hv.csv"
+```
 
+Esse arquivo contém cabeçalho, ou seja, a primeira linha traz o nome das colunas. Por esta razão, informaremos "header = T". Ignore por hora o argumento "sep".
 
+```{r}
+dados <- read.table(file1, header = T, sep = ",")
+head(dados)
+```
 
+O que aconteceria se escolhessemos "header = F"?
+
+```{r}
+dados <- read.table(file1, header = F, sep = ",")
+head(dados)
+```
+
+Em primeiro lugar, o nome das variáveis é inserido automaticamente e na sequência V1, V2, ..., Vn, onde n é o número de colunas. Além disso, os nomes das variávei é lido como se fosse uma observação. Disso resulta que todas as variáveis serão lidas com um texto na primeira coluna, resultando, em "character" ou "factor".
+
+```{r}
+str(dados)
+```
 
 
 
