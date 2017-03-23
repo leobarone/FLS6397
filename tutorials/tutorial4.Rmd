@@ -97,14 +97,44 @@ dados <- read.table(file1, header = F, sep = ",")
 head(dados)
 ```
 
-Em primeiro lugar, o nome das variáveis é inserido automaticamente e na sequência V1, V2, ..., Vn, onde n é o número de colunas. Além disso, os nomes das variávei é lido como se fosse uma observação. Disso resulta que todas as variáveis serão lidas com um texto na primeira coluna, resultando, em "character" ou "factor".
+Em primeiro lugar, o nome das variáveis é inserido automaticamente e na sequência V1, V2, ..., Vn, onde n é o número de colunas. Além disso, os nomes das variávei é lido como se fosse uma observação. Disso resulta que todas as variáveis serão lidas com um texto na primeira coluna, resultando, em "character" ou "factor" a depender das características dos dados.
 
 ```{r}
 str(dados)
 ```
 
+Vamos observar agora uma versão dos dados que não contém a primeira linha como nome das variáveis. Os dados estão no url armazenado em file2:
+
+```{r}
+file2 <- "https://raw.githubusercontent.com/leobarone/FLS6397/master/data/bf_amostra_nv.csv"
+```
+
+Como já havíamos visto, quando não há cabeçalho na primeira linha, os nomes são inseridos automaticamente:
+
+```{r}
+dados <- read.table(file2, header = F, sep = ",")
+head(dados)
+```
+
+E se cometermos o erro de indicar que há cabeçalho quando não há?
+
+```{r}
+dados <- read.table(file2, header = T, sep = ",")
+head(dados)
+```
+
+A primeira linha de dados se torna o nome das variáveis (inclusive os números antecedidos por um "X").
+
+Ambos arquivos têm o mesmo separador: vírgula. O argumento "sep" permite indicar qual é o separador.
+
+Não há muita graça em observar os exemplos com separadores diferente, mas vejamos como abrí-los:
+
+```{r}
+# Ponto e virgula
+file3 <- "https://raw.githubusercontent.com/leobarone/FLS6397/master/data/bf_amostra_hp.csv"
 
 
-
+file3 <- "https://raw.githubusercontent.com/leobarone/FLS6397/master/data/bf_amostra_ht.csv"
+```
 
 

@@ -29,7 +29,7 @@ write.table(bf, file.path(pasta, "bf_amostra_hp.csv"),
 write.table(bf, file.path(pasta, "bf_amostra_hv.csv"), 
             sep = ",", col.names = T, row.names = F)
 
-write.table(bf, file.path(pasta, "bf_amostra_np.csv"), 
+write.table(bf, file.path(pasta, "bf_amostra_nv.csv"), 
             sep = ",", col.names = F, row.names = F)
 
 write.table(bf, file.path(pasta, "bf_amostra_np.csv"), 
