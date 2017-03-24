@@ -349,3 +349,73 @@ A função _read\_excel_ aceita os argumentos "col_names", "col_types" e "skip" 
 file.remove("Base 2005.xls")
 ```
 
+## Dados de SPSS, Stata e SAS
+
+R é bastante flexível quanto à importação de dados de outros softwares estatísticos. Para este fim também há dois pacotes, _foreign_, mais antigo e conhecido, e _haven_, que é, advinhe só, parte do _tidyverse_. São parecidos entre si e recomendo o uso do segundo, que examinaremos abaixo.
+
+```{r}
+library(haven)
+```
+
+Basicamente, há cinco funções de importação de dados em _haven_: _read\_sas_, para dados em SAS; _read\_stata_ e _read\_dta_, idênticas, para dados em formato .dta gerados em Stata; e _read\_sav_ e _read\_por_, uma para cada formato de dados em SPSS. O uso, como era de se esperar, é bastante similar ao que vimos no tutorial todo.
+
+Vamos usar como exemplo o [Latinobarômetro 2015](http://www.latinobarometro.org/latContents.jsp), que está disponível para SAS, Stata, SPSS e R. Como os arquivos são grandes demais e o portal do Latinobarômetro é "cheio de javascript" (dá mais trabalho pegar dados de um portal com funcionalidades construídas nesta linguagem), vamos fazer o processo manual de baixar os dados, descompactá-los e abrí-los. Vamos ignorar SAS por razões que não interessam agora e por não ser uma linguagem popular nas ciências se sociais, mas se você tiver interesse em saber mais, me procure.
+
+Deixo abaixo uma breve descrição do Latinobarômetro que "roubei" de outro curso que ministrei. É possível que façamos exercícios com o Latinobarômetro no futuro, dado que é um banco de dados com muitas (muitas mesmo) variáveis categóricas, posto que é survey.
+
+#### 2011 Latinobarometer
+
+The second dataser is the 2015 Latinobarometer. This is a very popular survey on democracy and elections in Latin America and the original can be found [here](http://www.latinobarometro.org/latContents.jsp). Latinobarometer contains data on several Latin American Countries. We are going to use the data on Brazil only. "Barometers" are very good source of public opinion data regarding issues of political regime, civil liberties, economic performance of governments and etc. I am sure this dataset can be source of lots of dissertations of students in political economy and comparative politics.
+
+We will use the dataset to formulate hypothesis about the brazilian electorate and explore our creativity. This is why it will be very important that we spend some time exploring the dictionary, whose .pdf is available both in [english](https://github.com/leobarone/IPSA_USP_EADA_2017/blob/master/Data/Latinobarometro_2011_eng.pdf) and [spanish](https://github.com/leobarone/IPSA_USP_EADA_2017/blob/master/Data/Latinobarometro_2011_esp.pdf) (although not in portuguese, even though it exists). It is a consolidated survey, so don't be frustrated if the data you are looking for is not ther and look for something else.
+
+## Abrindo os dados com haven
+
+Vejamos o uso das funções em arquivos de diferentes formatos:
+
+```{r}
+# SPSS
+lat <- read_spss("/home/acsa/FLS/Latinobarometro_2015_Eng.sav")
+head(lat)
+
+# Stata
+lat <- read_stata("/home/acsa/FLS/Latinobarometro_2015_Eng.dta")
+head(lat)
+```
+
+Simples assim.
+
+Há critérios de conversão de variáveis categóricas, rótulos e etc, adotados pelo R ao importar arquivos de outras linguagens, mas você pode descobrí-los testando sozinh@.
+
+## Arquivos .RData
+
+Faça download do arquivo do Latinobarômetro 2015 para formato R. Você verá que o arquivo tem a extensão .RData. Este é o formato de dados do R? Sim e não.
+
+Começando pelo "não": um arquivo .RData não é um arquivo de base de dados em R, ou seja, não contém um _data frame_. Ele contém um workspace inteiro! Ou seja, se você salvar o seu workspace agora usando o "botão de disquete" do RStudio que está na aba "Enviroment" (provavelmente no canto superior à direita), você salvará todos os objetos que ali estão -- _data frames_, vetores, funções, gráficos, etc -- e não apenas um único _data frame_.
+
+Não há um arquivo de dados do R que se pareça com os arquivos de SPSS e Stata. Em um tutorial futuro veremos como exportar arquivos de texto com as famílias de funções "write", primas das funções "read", dos mesmos pacotes que usamos neste tutorial.
+
+Para salvar um arquivo .RData sem usar o "botão do disquete", use a função _save.image_:
+
+```{r}
+save.image("myWorkspace.RData")
+```
+
+Para abrir um arquivo .RData, por exemplo, o do Latinobarômetro ou o que você acabou de salvar, use a função _load_:
+
+```{r}
+# Latinobarometro
+load("/home/acsa/FLS/Latinobarometro_2015_Eng.rdata")
+
+# Workspace do tutorial
+load("myWorkspace.RData")
+```
+
+```{r, include = F}
+file.remove("myWorkspace.RData")
+```
+
+## Fim
+
+
+

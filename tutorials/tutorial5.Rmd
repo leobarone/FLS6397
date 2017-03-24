@@ -1,0 +1,49 @@
+---
+title: "Manipulação de dados em R"
+author: "Leonardo Sangali Barone"
+date: "March 27, 2017"
+output: pdf_document
+---
+  
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Manipulação de dados com a gramática básica do R
+
+A esta altura do campeonato, você já tem bastante recursos para programar em R. Combinando seu conhecimento sobre vetores, _data frames_, tipos de dados, loops, condicionais e funções dá para fazer um bocado de coisas legais.
+
+Falta, porém, algo essencial e muito próprio da linguagem R: como manipular variáveis e observações em um _data frame_. Boa parte da tarefa de organização de dados para a pesquisa se resume ao que faremos neste tópico e é nele que R se aproxima do uso de outras ferramantas como SPSS, Stata e SAS.
+
+No tutorial anterior, vimos que há "gramáticas" diferentes para a manipulação de dados em R. Nosso objetivo é aprender bem a "gramática" do _tidyverse_ e vamos ignorar a do pacote _data.table_. A primeira seria suficiente para seguirmos.
+
+A "gramática" básica do R é pouco elegante e essa é uma das barreiras ao aprendizado da linguagem. Ela é bem mais confusa e "verbosa" (ou seja, tem que escrever muito) do que as dos demais softwares de análise de dados. Mas sem conhecer como funciona a "gramática" básica da linguagem R, nossa capacidade de aprender mais no futuro ficaria bastante limitada. Lembre-se que aprenderemos num futuro breve formas equivalentes de fazermos as mesmas coisas.
+
+## Variáveis e data frames
+
+Para esta atividade, vamos trabalhar com um banco de dados falso que criei (fake_data):
+
+```{r}
+library(data.table)
+fake <- fread("/home/acsa/Desktop/Essentials of Applied Data Analysis 2017/IPSA_USP_EADA_2017/Data/fake_data.csv")
+```
+
+
+Para esta atividade, vamos trabalhar com um banco de dados que já uso em laboratórios de estatística há alguns anos. Novamente, "roubei" (com pequenas alterações) de outra disciplina que lecionei a descrição dos dados:
+
+### 2013 Growth Academic Performance Index (API) Data File
+
+We will use 2 different datasets. The first one is the 2013 Growth Academic Performance Index (API) Data File, from the California Department of Education. The original dataset can be found [here](http://www.cde.ca.gov/ta/ac/ap/). This dataset contains the Standardized Testing and Reporting (STAR) Results for californian schools in 2013, a program that lasted from to 1996 to 2013, when it was finally substituted. We will work with a selected subset of the dataset. 
+
+About this dataset: each unit in the dataset is a californian school. The data contain the main result of the test in 2013, in the previous year, and a ton of information about the school caracteristics. There are 180 variables in the original dataset. The analysis problem here is pretty much obvious: we want to explain school performance by it's caracteristics. In this module, we will use tables, graphs and correlations, as well as regression analysis if time allows, to explore this problem.
+
+Whenever you need to check a variable in this dataset, you can go to the dictionary, available online [here](http://www.cde.ca.gov/ta/ac/ap/reclayout13g.asp). Please, be sure you download the [data](https://github.com/leobarone/IPSA_USP_EADA_2017/blob/master/Data/api13_school_data.dta), the modified version we prepared for the course -- it is already in Stata format -- into your computer before you start.
+
+I particularly like this dataset because you can, in the near future, learn more Stata by yourself at [IDRE-UCLA](http://www.ats.ucla.edu/stat/stata/) resources, whose [web book](http://www.ats.ucla.edu/stat/stata/webbooks/reg/chapter1/statareg1.htm) on regression analysis uses and older versions of the same dataset.
+
+
+
+Neste tutorial vamos cobrir uma série de métodos disponíveis para abrirmos arquivos de texto e excel no R. Vamos dar atenção aos argumentos das funções de forma a solucionar dificuldades de abertura de dados com diferentes características ou em sistemas operacionais variados.
+
+## Pacotes no R
+
