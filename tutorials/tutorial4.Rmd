@@ -146,10 +146,10 @@ Por default, _read.table_ considera que os campos em cada coluna estão envolvid
 
 Por vezes é conveniente importar apenas um subconjunto das linhas. "skip" permite que pulemos algumas linhas e "nrows" indica o máximo de linhas a serem abertas. Se o banco de dados for desconhecido e muito grande, abrir uma fração permite conhecer (tentando e errando) os demais argumentos ("header", "sep", etc) adequados para abrir os dados com um baixo custo de tempo e paciência.
 
-Por exemplo, para pular as 10 primeiras linhas:
+Por exemplo, para pular as 3 primeiras linhas:
 
 ```{r}
-dados <- read.table(file2, header = T, sep = ",", skip = 10)
+dados <- read.table(file2, header = T, sep = ",", skip = 3)
 head(dados)
 ```
 
@@ -170,12 +170,182 @@ head(dados)
 Por vezes, é interessante definir as classes das variáveis a serem importadas. O argumento deve ser um vetor com uma classe para cada coluna. Por exemplo:
 
 ```{r}
-dados <- read.table(file1, header = F, sep = ",", 
+dados <- read.table(file1, header = T, sep = ",", 
   colClasses = c("character", "numeric","character", "numeric", "numeric"))
 str(dados)
 ```
 
+Perceba que quando abrimos os dados sem especificar o tipo da coluna, a função _read.table_ tenta identificá-los. Uma das grandes chatices das funções de abertura de dados pacote _utils_ é que colunas de texto são normalmente identificadas como "factors", mesmo quando claramente não são. Veja os exemplos anteriores
+
+Para evitar que textos sejam lidos como "factors" é importante informar o parâmetro "stringsAsFactors = F", pois o padrão é "T". Este argumento incomoda tanto que diversas pessoas chegam a alterar a configuração básica da função para não ter de informá-lo diversas vezes.
+
+
 ```{r}
-xtable(dados[1:10,])
+dados <- read.table(file1, header = T, sep = ",", stringsAsFactors = F)
+str(dados)
+```
+
+Note que, agora, "uf" e "munic" são importadas como "character".
+
+Finalmente, é comum termos problemas para abrir arquivos que contenham caracteres especiais, pois há diferentes formas do computador transformar 0 e 1 em vogais acentuadas, cecedilha, etc. O "encoding" de cada arquivo varia de acordo com o sistema operacional e aplicativo no qual foi gerado.
+
+Para resolver este problema, informamos ao R o parâmetro "fileEncoding", que indica qual é o "encoding" esperado do arquivo. Infelizmente não há formas automáticas de descobrir o "encoding" de um arquivo e é preciso conhecer como foi gerado -- seja por que você produziu o arquivo ou por que teve acesso à documentação -- ou partir para tentativa e erro. Alguns "encodings" comuns são "latin1", "latin2" e "utf8", mas há diversos outros. Comoo arquivo com o qual estamos trabalhando não contém caracteres especiais, não é preciso fazer nada.
+
+## Tibbles e tidyverse
+
+O desenvolvimento de pacotes em R levou à criação de um tipo específico de _data frame_, chamado _tibble_. A estrura é idêntica à de um _data frame_ regular e suas diferenças se resumem à forma que os dados aparecem no console ao "imprimirmos" o objeto, ao "subsetting", ou seja, à seleção de linhas e à adoção de "stringsAsFactors = F" como padrão. Você pode ler mais sobre _tibbles_ [aqui](https://cran.r-project.org/web/packages/tibble/vignettes/tibble.html).
+
+O pacote _readr_, parte do _tidyverse_ (conjunto de pacotes com o qual vamos trabalhar), contém funções para abertura de dados em .txt semelhantes às do pacote _utils_, mas que trazem algums vantagens: velocidade de abertura, simplicação de argumentos e a produção de _tibbles_ como resultado da importação.
+
+```{r}
+library(readr)
+```
+
+A função análoga à _read.table_ em _readr_ chama-se _read\_delim_. Veja:
+
+```{r}
+dados <- read_delim(file1, delim = ",")
+dados
+```
+
+Observe que não utilizamos _head_ para imprimir as primeiras linhas. Essa é uma característica de _tibbles_: o output contém uma fração do banco, a informação sobre número de linhas e colunas, e os tipos de cada variável abaixo dos nomes das colunas. "delim" é o argumento que entra no lugar de "sep" ao utilizarmos as funções do _readr_.
+
+O padrão de _read\_delim_ é importar a primeira coluna como nome das variáveis. No lugar de _header_, temos agora o argumento "col_names", que deve ser igual a "FALSE" para os dados armezenados em "file2", por exemplo:
+
+```{r}
+dados <- read_delim(file2, col_names = F, delim = ",")
+dados
+```
+
+X1, X2, ..., Xn, com "n" igual ao número de colunas, passam a ser os nomes das variáveis neste caso.
+
+Além dos valores lógicos, "col_names" também aceita um vetor com novos nomes para as colunas como argumento:
+
+```{r}
+dados <- read_delim(file2, col_names = c("estado", "municipio_cod", "municipio_nome",
+                                         "NIS", "transferido"),
+                    delim = ",")
+dados
+```
+
+"skip" e "n_max" são os argumentos de _read\_delim_ correspondentes a "skip" e "nrows".
+
+Finalmente, "col_types" cumpre a função de "colClasses", com uma vantagem: não é preciso usar um vetor com os tipos de dados para cada variável. Basta escrever uma sequência de caracteres onde "c" = "character", "d" = "double", "l" = "logical" e "i" = "integer":
+
+```{r}
+dados <- read_delim(file1, delim = ",", col_types = "cicid")
+dados
+```
+
+Mais econômico, não?
+
+_read\_csv_ e _read\_tsv_ são as versões de _read\_delim_ para arquivos separados por vírgula e arquivos separado por tabulações.
+
+Do ponto de vista forma, as três funções de importação de dados de texto do pacote _readr_ geram objetos que pertecem à classe de _data frames_ e também às classes _tbl_ e _tbl\_df_, que são as classes de _tibbles_.
+
+Ainda no pacote _readr_, duas funções são bastante úteis
+
+
+## Outra gramática para dados em R: data.table
+
+No curso vamos trabalhar com duas "gramáticas" para dados em R: a dos pacotes básicos e a fornecida pelos pacotes do _tidyverse_. O pacote _data.table_ oferece uma terceira alternativa, que não trabalharemos no curso. Esta "gramática" guarda semelhanças (poucas, ao meu ver) com a linguagem SQL.
+
+```{r}
+library(data.table)
+```
+
+
+Há, porém, duas funções excepcionalmente boas neste pacote: _fread_ e _fwrite_, que servem, respectivamente, para importar e exportar dados de texto.
+
+```{r}
+class(dados)
+```
+
+
+As duas grandes vantagens de utilizar _fread_ são: a função detecta os automaticamente as características do arquivo de texto para definir delimitador, cabeçalho, tipos de dados das colunas, etc; e é extremamente rápida em comparação às demais. "f" vem de "Fast and friendly file finagler".
+
+```{r}
+dados <- fread(file1)
+head(dados)
+```
+
+Além de ser um _data.frame_, os objeto criado com _fread_ também é da classe _data.table_ e aceita a "gramática" do pacote de mesmo nome.
+
+Obviamente, se você precisar especificar os argumentos para _fread_ ler um arquivo, não há problemas. Eles são muito parecidos aos de _read.table_.
+
+## Dados em arquivos editores de planilhas
+
+Editores de planilha são, em geral, a primeira ferramenta de análise de dados que aprendemos. Diversas organizações disponibilizam (infelizmente) seus dados em formato .xls ou .xlsx e muitos pesquisadores utilizam editores de planilha para construir bases de dados.
+
+Vamos ver como obter dados em formato .xls ou .xlsx diretamente, sem precisar abrir os arquivos e exportá-los para um formato de texto.
+
+Há dois bons pacotes com funções para dados em editores de planilha: _readxl_ e _gdata_. Vamos trabalhar apenas com o primeiro, mas convém conhecer o segundo se você for trabalhar constantemente com planilhas e quiser editá-las, e não só salvá-las. _readxl_ também é parte do _tidyverse_. Importe o pacote:
+
+```{r}
+library(readxl)
+```
+
+
+## Um pouco sobre donwload e manipulação de arquivos
+
+Nosso exemplo será a Pesquisa Perfil dos Municípios Brasileiros de 2005, produzida pelo IBGE e apelidade de MUNIC. Diferentemente das demais funções deste tutorial, precisamos baixar o arquivo para o computador e acessá-lo localmente. Faça o download diretamente do [site do IBGE](ftp://ftp.ibge.gov.br/Perfil_Municipios/2005/base_MUNIC_2005.zip) e descompacte. Ou, mais interessante ainda, vamos automatizar o download e descompactação do arquivo (aviso: pode dar erro no Windowns e tentaremos corrigir na hora).
+
+Em primeiro lugar, vamos guardar o endereço url do arquivo em um objeto e fazer o download. Note que na função _download.file_ o primeiro argumento é o url e o segundo é o nome do arquivo que será salvo (nota: você pode colocá-lo em qualquer pasta utilizando _file.path_ para construir o caminho completo para o arquivo a ser gerado).
+
+```{r}
+url_arquivo <- "ftp://ftp.ibge.gov.br/Perfil_Municipios/2005/base_MUNIC_2005.zip"
+download.file(url_arquivo, "temp.zip", quiet = F)
+```
+
+O argumento "quiet = F" serve para não imprimirmos no console "os números" do download (pois o tutorial ficaria poluído), mas você pode retirá-lo ou alterá-lo caso queira ver o que acontece.
+
+Com _unzip_, vamos extrair o conteúdo da pasta:
+
+```{r}
+unzip("temp.zip")
+```
+
+Use _list.files_ para ver todos os arquivos que estão na sua pasta caso você não saiba o nome do arquivo baixado. No nosso caso utilizaremos o arquivo "Base 2005.xls"
+
+```{r, eval = F}
+list.files()
+```
+
+Vamos aproveitar e excluir nosso arquivo .zip temporário: 
+
+```{r}
+file.remove("temp.zip")
+```
+
+## Voltando às planilhas
+
+Para não repetir o nome do arquivo diversas vezes, vamos criar o objeto "arq" que contém o endereço do arquivo no seu computador (ou só o nome do arquivo entre aspas se você tivê-lo no seu wd):
+
+```{r}
+arquivo <- "Base 2005.xls"
+```
+
+Com _excel\_sheets_ examinamos quais são as planilhas existentes do no arquivo:
+
+```{r, echo = F, results = 'hide'}
+excel_sheets(arquivo)
+```
+
+No caso, temos 11 planilhas diferentes (e um bocao de mensagens de erro estranhas). O dicionário, para quem já trabalhou alguma vez com a MUNIC, não é uma base de dados, apenas textos espalhados entre células. As demias, no entanto, têm formato adequado para _data frame_.
+
+Vamos importar os dados da planilha "Variáveis externas". Todas duas maneiras abaixo se equivalem:
+
+```{r, echo = F, results = 'hide'}
+# 1
+transporte <- read_excel(arquivo, "Variáveis externas")
+
+# 2
+transporte <- read_excel(arquivo, 11)
+```
+
+A função _read\_excel_ aceita os argumentos "col_names", "col_types" e "skip" tal como as funções de importação do pacote _readr_.
+
+```{r, include = F}
+file.remove("Base 2005.xls")
 ```
 
