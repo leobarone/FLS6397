@@ -16,12 +16,12 @@ bf <- bf %>%
   select(uf, codmunic, munic, nis, valor) %>%
   collect()
 
-bf <- bf %>% sample_n(10)
+bf <- bf %>% sample_n(50)
 
 
 pasta <- "/home/acsa/FLS6397/data"
 write.table(bf, file.path(pasta, "bf_amostra_ht.csv"), 
-                          sep = "/t", col.names = T, row.names = F)
+                          sep = "\t", col.names = T, row.names = F)
 
 write.table(bf, file.path(pasta, "bf_amostra_hp.csv"), 
             sep = ";", col.names = T, row.names = F)
@@ -34,3 +34,4 @@ write.table(bf, file.path(pasta, "bf_amostra_nv.csv"),
 
 write.table(bf, file.path(pasta, "bf_amostra_np.csv"), 
             sep = ";", col.names = F, row.names = F)
+

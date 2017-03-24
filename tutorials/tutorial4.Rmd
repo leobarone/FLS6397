@@ -75,7 +75,7 @@ Use as funções que acabamos de ver para gerenciar caminhos de pastas no R. Val
 
 ## read.table
 
-Voltando à função _read.table_, vamos examinar os argumentos seguintes a _file_ usando um exemplo de dados retirado do Portal da Transparência. Extraí dos pagamentos do programa uma amostra de tamanho 10 e salvei em diversos arquivos com caracteristicas distintas.
+Voltando à função _read.table_, vamos examinar os argumentos seguintes a _file_ usando um exemplo de dados retirado do Portal da Transparência. Extraí dos pagamentos do programa uma amostra de tamanho 50 e salvei em diversos arquivos com caracteristicas distintas.
 
 Para facilitar nossa vida, vamos usar como argumento "file" o endereço dos dados no repositório do curso. O primeiro arquivo está no enderço que guardaremos em "file1".
 
@@ -127,14 +127,55 @@ A primeira linha de dados se torna o nome das variáveis (inclusive os números 
 
 Ambos arquivos têm o mesmo separador: vírgula. O argumento "sep" permite indicar qual é o separador.
 
-Não há muita graça em observar os exemplos com separadores diferente, mas vejamos como abrí-los:
+Não há muita graça em observar os exemplos com separadores diferente, mas vejamos como abrí-los. Os mais comuns, além da vírgula, são o ponto e vírgula e o tab, este último representado pelo símbolo "\t"
 
 ```{r}
 # Ponto e virgula
 file3 <- "https://raw.githubusercontent.com/leobarone/FLS6397/master/data/bf_amostra_hp.csv"
+dados <- read.table(file3, header = T, sep = ";")
 
-
-file3 <- "https://raw.githubusercontent.com/leobarone/FLS6397/master/data/bf_amostra_ht.csv"
+file4 <- "https://raw.githubusercontent.com/leobarone/FLS6397/master/data/bf_amostra_ht.csv"
+dados <- read.table(file4, header = T, sep = "\t")
 ```
 
+Há outras funções da mesma família de _read.table_ no pacote _utils_. A diferença entre elas é o separador de colunas -- vírgula para _read.csv_, ponto e vírgula para _read.csv2_, tab para _read.delim_ e _read.delim2_ -- e o separador de decimal.
+
+Por default, _read.table_ considera que os campos em cada coluna estão envolvidas por aspas duplas (quote = "\\"". Para indicar que não há nada, use quote = "".
+
+"dec" é o argumento para o separador decimais. Como o padrão brasileiro é a vírgula, e não o ponto, este argumento costuma ser importante.
+
+Por vezes é conveniente importar apenas um subconjunto das linhas. "skip" permite que pulemos algumas linhas e "nrows" indica o máximo de linhas a serem abertas. Se o banco de dados for desconhecido e muito grande, abrir uma fração permite conhecer (tentando e errando) os demais argumentos ("header", "sep", etc) adequados para abrir os dados com um baixo custo de tempo e paciência.
+
+Por exemplo, para pular as 10 primeiras linhas:
+
+```{r}
+dados <- read.table(file2, header = T, sep = ",", skip = 10)
+head(dados)
+```
+
+Para abrir apenas 20 linhas:
+
+```{r}
+dados <- read.table(file2, header = T, sep = ",", nrows = 20)
+head(dados)
+```
+
+Combinando, para abrir da linha 11 à linha 30:
+
+```{r}
+dados <- read.table(file1, header = T, sep = ",", skip = 10, nrows = 30)
+head(dados)
+```
+
+Por vezes, é interessante definir as classes das variáveis a serem importadas. O argumento deve ser um vetor com uma classe para cada coluna. Por exemplo:
+
+```{r}
+dados <- read.table(file1, header = F, sep = ",", 
+  colClasses = c("character", "numeric","character", "numeric", "numeric"))
+str(dados)
+```
+
+```{r}
+xtable(dados[1:10,])
+```
 
