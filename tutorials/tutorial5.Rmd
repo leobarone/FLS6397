@@ -406,4 +406,29 @@ fake_novo <- fake_duplicado[!duplicated(fake_duplicado),]
 
 Note que precisamos da exclamação (operador lógico "não") para ficar com todas as linhas __não__ duplicadas.
 
+## Item Adicional - Renomeando variáveis
+
+Em breve veremos como renomear variáveis de uma maneira bastante mais simples. Por enquanto, vamos aprender o jeito trabalhoso de renomear um variável.
+
+Podemos observar os nomes das variáveis de um _data frame_ usando o comando _names_:
+
+```{r}
+names(fake)
+```
+
+Os nomes das colunas são um vetor. Para renomear as variáveis, basta substituir o vetor de nomes por outro. Por exemplo, vamos manter todas as variáveis com o mesmo nome, exceto as três primeiras:
+
+```{r}
+names(fake) <- c("idade", "sexo", "educacao", "income", "savings", "marriage", "kids", "party", "turnout", "vote_history", "economy", "incumbent", "candidate", "vazia", "poupanca", "savings_year", "rich", "rich2", "college")
+head(fake)
+```
+
+Você não precisa de um vetor com todos os nomes sempre que precisar alterar algum. Basta conhecer a posição da variável que quer alterar. Veja um exemplo com "marriage", que está na sexta posição:
+
+```{r}
+names(fake)[6] <- "casado"
+```
+
+Simples, porém um pouco mala.
+
 ## Fim
