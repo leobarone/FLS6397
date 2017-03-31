@@ -11,7 +11,11 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Bases de dados relacionais com a gramática básica do pacote dplyr
 
-Até agora, partimos de uma única base de dados e fizemos diversas transformações: mudamos de nomes de variáveis, computamos novas variáveis, selecionamos linhas e colunas, agrupamos e ordenamos. A partir de agora vamos aprender a combinar _data frames_ proveninentes de fontes diferente.
+Até agora, partimos de uma única base de dados e fizemos diversas transformações: mudamos de nomes de variáveis, computamos novas variáveis, selecionamos linhas e colunas, agrupamos e ordenamos. A partir de agora vamos aprender a combinar _data frames_ diferentes usando as funções do tipo __join__ do pacote _dplyr_. Vamos começar carregando o pacote:
+
+```{r}
+library(dplyr)
+```
 
 # Comparação dos pagamentos entre janeiro de 2011 e janeiro de 2017 no Programa Bolsa Família
 
@@ -22,10 +26,10 @@ Vamos começar importando os dados do mês de janeiro de cada um dos anos para o
 Se você estiver com tempo em sala de aula, faça como exercício a construção desses dados (em vez de baixá-los do repositório do curso). A recomendação é baixar os dados manualmente no Portal da Transparência, abrí-los com a função _fread_ do pacote _data.table_ e selecionar as linhas de Borá com a função _filter_ do pacote _dplyr_. Se não estiver com tempo, use o código abaixo.
 
 ```{r}
+library(readr)
 pagamentos11 <- read_delim("https://raw.githubusercontent.com/leobarone/FLS6397/master/data/saques_amostra_201701.csv", delim = ";", col_names = T)
 pagamentos17 <- read_delim("https://raw.githubusercontent.com/leobarone/FLS6397/master/data/saques_amostra_201701.csv", delim = ";", col_names = T)
 ```
-
 
 Veja que os dados são semelhantes e têm a mesma estrutura. Esperamos, entretanto, que haja variação entre os anos e que os beneficiários e os valores pagos não sejam os mesmos, seja por que as pessoas entraram e saíram do programa ao longo do tempo, seja por que mudaram de município, seja por que os valores sofreram alteração em virtude de reajuste e mudanças na estrutura das famílias.
 
@@ -137,7 +141,7 @@ comb_semi <- semi_join(pagamentos11, pagamentos17, by = "nis")
 Por fim, _anti\_join_, tem comportamento semelhante a _semi\_join_, mas, em vez de retornar as observações de 2011 que têm correspondência em 2017, retorna as que nâo têm par em 2017:
 
 ```{r}
-comb_anti <- anit_join(pagamentos11, pagamentos17, by = "nis")
+comb_anti <- anti_join(pagamentos11, pagamentos17, by = "nis")
 ```
 
 É perfeitamente possível usar o operador %>% (pipe, como é chamado), para os "joins". Basta colocar a base na posição "x" (primeira a ser inserida) antes do operador. Veja um exemplo:
@@ -150,16 +154,32 @@ comb_left <- pagamentos11 %>% left_join(pagamentos17, by = "nis")
 
 Respire fundo e gaste um tempo refletindo sobre os "joins". Você acabou de aprender como operar bancos de dados relacionais e pode parecer bastante difícil num primeiro momento.
 
-bind_cols
-bind_rows
-
 ## Combinação de tabela e agregações cumulativas
 
 Vamos supor que queremos calcular os valores total, médio, máximo, etc, por município e, a seguir, apresentar esses valores como colunas para cada observação. Uma maneira eficiente de fazer isso é a usando a combinação de tabelas. Vamos er como voltando ao exemplo da amostra de saques do Programa Bolsa Família em 2017.
 
 ## Exercício
 
-Abra a base de dados e faça as transformações necessárias (renomear variáveis e transformar a variável valor em numérica) antes de prosseguir.
+Abra a base de dados e faça as transformações necessárias (renomear variáveis e transformar a variável valor em numérica) antes de prosseguir. Tente fazê-lo sem olhar a resposta abaixo.
+
+## Resposta ao exercício anterior
+
+```{r}
+library(readr)
+saques_amostra_201701 <- read_delim("https://raw.githubusercontent.com/leobarone/FLS6397/master/data/saques_amostra_201701.csv", delim = ";", col_names = T)
+
+saques_amostra_201701 <- saques_amostra_201701 %>% 
+  rename(uf = UF, 
+         munic = `Nome Município`,
+         cod_munic = `Código SIAFI Município`, 
+         nome = `Nome Favorecido`,
+         valor = `Valor Parcela`, 
+         mes = `Mês Competência`, 
+         data_saque =`Data do Saque`) %>% 
+  select(uf, munic, cod_munic, nome, valor, mes, data_saque) %>% 
+  mutate(valor_num = as.numeric(gsub(",", "", valor)))
+```
+
 
 ## Pasos para agregações cumulativas
 
@@ -169,18 +189,19 @@ Em primeiro lugar, vamos construir uma tabela agrupada por município usando _gr
 valores_munic <- saques_amostra_201701 %>% 
   group_by(cod_munic) %>% 
   summarise(contagem = n(),
-            soma = sum(valor),
-            media = mean(valor),
-            mediana = median(valor),
-            desvio = sd(valor),
-            minimo = min(valor),
-            maximo = max(valor))
+            soma = sum(valor_num),
+            media = mean(valor_num),
+            mediana = median(valor_num),
+            desvio = sd(valor_num),
+            minimo = min(valor_num),
+            maximo = max(valor_num))
 ```
 
 Note que agora temos dois _data frames_, o original e "valores_munic", que pode ser combinados utilizando a variável "cod_munic". Usando _left\_join_ podemos levar as colunas da nova tabela à base de dados original:
 
 ```{r}
-saques_amostra_201701 <- saques_amostra_201701 %>% left_join(valores_munic, by = "cod_munic")
+saques_amostra_201701 <- saques_amostra_201701 %>% 
+  left_join(valores_munic, by = "cod_munic")
 ```
 
 Use _View_ para observar que a base de dados original tem agora 7 novas colunas com informações agregadas por município (e que, portanto, se repetem para observações de um mesmo município).
@@ -190,5 +211,3 @@ Use _View_ para observar que a base de dados original tem agora 7 novas colunas 
 - Calcule o total de valores por UF em um novo _data frame_.
 - Combine o novo _data frame_ com o original para levar a coluna de total de valores ao último.
 - A seguir, calcule quanto cada indivíduo na amostra representa, em termor percentuais (dica: crie uma nova variável utilizando _mutate_).
-
-\pagebreak

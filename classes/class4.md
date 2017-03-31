@@ -3,7 +3,7 @@
 - Responsável: Leonardo S. Barone
 - Data: 03/04/2017
 
-## Aula 3 - Primeiros passos no tidyverse
+## Aula 4 - Primeiros passos no tidyverse
 
 ### Objetivos Gerais
 
