@@ -18,4 +18,4 @@ O curso está dividido em duas partes. A primeira parte do curso foca na prepara
 - 13/03/2017 - [Aula 1](https://github.com/leobarone/FLS6397/blob/master/classes/class1.md) - Introdução ao curso e R Básico
 - 20/03/2017 - [Aula 2](https://github.com/leobarone/FLS6397/blob/master/classes/class2.md) - Do básico ao intermediário
 - 27/03/2017 - [Aula 3](https://github.com/leobarone/FLS6397/blob/master/classes/class3.md) - Abrindo e manipulando _data frames_
-- 03/04/2017 - [Aula 4](https://github.com/leobarone/FLS6397/blob/master/classes/class3.md) - Primeiros passos no tidyverse
+- 03/04/2017 - [Aula 4](https://github.com/leobarone/FLS6397/blob/master/classes/class4.md) - Primeiros passos no tidyverse
