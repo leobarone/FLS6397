@@ -28,7 +28,7 @@ Se você estiver com tempo em sala de aula, faça como exercício a construção
 ```{r}
 library(readr)
 pagamentos11 <- read_delim("https://raw.githubusercontent.com/leobarone/FLS6397/master/data/pagamentos11.csv", delim = ";", col_names = T)
-pagamentos17 <- read_delim("https://raw.githubusercontent.com/leobarone/FLS6397/master/data/pagamentos11.csv", delim = ";", col_names = T)
+pagamentos17 <- read_delim("https://raw.githubusercontent.com/leobarone/FLS6397/master/data/pagamentos17.csv", delim = ";", col_names = T)
 ```
 
 Veja que os dados são semelhantes e têm a mesma estrutura. Esperamos, entretanto, que haja variação entre os anos e que os beneficiários e os valores pagos não sejam os mesmos, seja por que as pessoas entraram e saíram do programa ao longo do tempo, seja por que mudaram de município, seja por que os valores sofreram alteração em virtude de reajuste e mudanças na estrutura das famílias.
