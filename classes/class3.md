@@ -21,7 +21,7 @@ Nessa aula começaremos a fazer alguns desafios (sem a finalidade de avaliação
 
 ## Desafio 0
 
-Vamos começar a trabalhar sem os tutoriais em sala de aula. Se você tiver terminado a tempo o tutorial 5, comece a fazer o desafios de programação e manipulação de dados. Clique [aqui](https://github.com/leobarone/FLS6397/blob/master/activities/datachallange1.md) e vá para o desafio.
+Vamos começar a trabalhar sem os tutoriais em sala de aula. Se você tiver terminado a tempo o tutorial 5, comece a fazer o desafios de programação e manipulação de dados. Clique [aqui](https://github.com/leobarone/FLS6397/blob/master/activities/datachallange0.md) e vá para o desafio.
 
 Se você tiver acabado tudo com rapidez, converse comigo para receber um desafio extra (ou pode ir embora, se preferir).
 

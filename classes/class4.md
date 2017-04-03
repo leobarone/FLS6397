@@ -23,9 +23,9 @@ Para quem nunca trabalhou com bases de dados relacionais, essa aula pode ser um 
 
 ## Desafio 1
 
-Clique [aqui](https://github.com/leobarone/FLS6397/blob/master/activities/datachallange2.md) e vá para o desafio.
+Clique [aqui](https://github.com/leobarone/FLS6397/blob/master/activities/datachallange1.md) e vá para o desafio.
 
-Você deve entregá-lo até o dia 12/04. As instruções para entrega estão no próprio desafio.
+Você deve entregá-lo até o dia 13/04. As instruções para entrega estão no próprio desafio.
 
 ### Roteiro pós-aula
 
