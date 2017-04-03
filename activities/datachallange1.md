@@ -8,12 +8,23 @@
 ## Instruções para Entrega
 
 Data: 13/04
+
 Formato: RScript (arquivo .R)
-Via: e-mail
+
+Via: e-mail com título "[FLS6397] - D1".
 
 ## Instruções para a atividade
 
 Siga as instruções abaixo. Documente __TODOS__ os seus passos em um script. Comente no seu script __TODOS__ os seus passos e explique a si mesm@ suas escolhas e estratégias. Colar pedaços de código nesta atividade é permitido e peça ajuda se precisar. Mencione __SEMPRE__ em comentários quando a solução encontrada não for sua.
+
+As primeiras linhas do seu script devem conter suas informações pessoais como comentário, tal qual o modelo abaixo:
+
+```{r}
+### nome <- "Fulano da Silva Sauro"
+### programa <- "Mestrado em Paleontologia"
+### n_usp <- 32165498
+### data_entrega: "29/02/2017"
+```
 
 ### Parte 1 - abrindo os dados
 
