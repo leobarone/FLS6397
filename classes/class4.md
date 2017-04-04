@@ -19,7 +19,7 @@ Para quem nunca trabalhou com bases de dados relacionais, essa aula pode ser um 
 
 1- Comece o Tutorial 6 assim que chegar em sala de aula [versão web](https://github.com/leobarone/FLS6397/blob/master/tutorials/tutorial6.Rmd) ou [versão pdf](https://github.com/leobarone/FLS6397/blob/master/tutorials/tutorial6.pdf). Este tutorial trata da manipulação de dados com as funções do pacote _dplyr_.
 
-2- A seguir, faça o Tutorial 7 [versão web](https://github.com/leobarone/FLS6397/blob/master/tutorials/tutorial7.Rmd) ou [versão pdf](https://github.com/leobarone/FLS6397/blob/master/tutorials/tutorial7.html), sobre bases de dados relacionais.
+2- A seguir, faça o Tutorial 7 [versão web](https://github.com/leobarone/FLS6397/blob/master/tutorials/tutorial7.Rmd) ou [versão pdf](https://github.com/leobarone/FLS6397/blob/master/tutorials/tutorial7.pdf), sobre bases de dados relacionais.
 
 ## Desafio 1
 
