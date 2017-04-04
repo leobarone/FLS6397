@@ -2,7 +2,7 @@
 title: "Manipulação de dados em R"
 author: "Leonardo Sangali Barone"
 date: "April 03, 2017"
-output: pdf_document
+output: html_document
 ---
 
 ```{r setup, include=FALSE}

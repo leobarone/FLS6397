@@ -1,7 +1,7 @@
 #  FLS 6397 - Introdução à Programação e Ferramentas Computacionais para as Ciências Sociais
 
 - Responsável: Leonardo S. Barone
-- Data: 27/07/2017
+- Data: 03/04/2017
 
 ## Desafio 1
 
