@@ -62,6 +62,8 @@ Se você tiver dúvida sobre as colunas e nomes das variáveis, consulte o arqui
 
 ### Parte 5 - agregando e combinando por candidato
 
+(AVISO: Como vári@s já me informaram, essa parte ficou estranha. Faria sentido se não estivessemos trabalhando com eleições municipais. Pode ignorar se tiver dificuldades)
+
 11- Usando as funções _group\_by_ e _sumarise_, produza um novo _data frame_ que contém o total de votos pela combinação de UF e número de candidato. Chame esse novo _data frame_ de _resultado\_cand_.
 
 12- Combine os _data frames_ resultado e resultado\_cand usando alguma função do tipo "_join_". Chame o novo _data frame_ de _resultado_, sobrescrevendo o _data frame_ existente. Note devemos usar um vetor no argumento "by" para combinarmos os _data frames_ por UF e número do candidato (ex: by = c("uf", "num_cand"))
