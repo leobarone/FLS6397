@@ -19,7 +19,7 @@ Nessa aula começaremos a fazer alguns desafios (sem a finalidade de avaliação
 
 2- A seguir, façao o Tutorial 5 [versão web](https://github.com/leobarone/FLS6397/blob/master/tutorials/tutorial5.Rmd) ou [versão pdf](https://github.com/leobarone/FLS6397/blob/master/tutorials/tutorial5.pdf). Não se preocupe se não acabar em sala de aula.
 
-## Desafio 0
+### Desafio 0
 
 Vamos começar a trabalhar sem os tutoriais em sala de aula. Se você tiver terminado a tempo o tutorial 5, comece a fazer o desafios de programação e manipulação de dados. Clique [aqui](https://github.com/leobarone/FLS6397/blob/master/activities/datachallange0.md) e vá para o desafio.
 

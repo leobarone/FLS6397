@@ -21,7 +21,7 @@ Para quem nunca trabalhou com bases de dados relacionais, essa aula pode ser um 
 
 2- A seguir, faça o Tutorial 7 [versão web](https://github.com/leobarone/FLS6397/blob/master/tutorials/tutorial7.Rmd) ou [versão pdf](https://github.com/leobarone/FLS6397/blob/master/tutorials/tutorial7.pdf), sobre bases de dados relacionais.
 
-## Desafio 1
+### Desafio 1
 
 Clique [aqui](https://github.com/leobarone/FLS6397/blob/master/activities/datachallange1.md) e vá para o desafio.
 
