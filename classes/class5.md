@@ -21,6 +21,8 @@ Faça as 3 atividades de webscrapping até antes da aula do dia 24/07: [Atividad
 
 Há um pacote no _tidyverse_ para webscrapping que nunca explorei: _rvest_. Sugiro que você dê uma rápida olhada [aqui](https://blog.rstudio.org/2014/11/24/rvest-easy-web-scraping-with-r/) e [aqui](https://stat4701.github.io/edav/2015/04/02/rvest_tutorial/) para aprender um pouco sobre esse pacote.
 
+Finalmente, para quem tiver interesse e em caráter opcional, deixo um breve tutorial em 2 partes sobre como obter dados do _twitter_: [parte 1](https://github.com/leobarone/Neci_twitter/blob/master/tutorial.Rmd) e [parte 2](https://github.com/leobarone/Neci_twitter/blob/master/tutorial2.Rmd)
+
 ### Desafio 2
 
 Clique [aqui](https://github.com/leobarone/FLS6397/blob/master/activities/datachallange2.md) e vá para o desafio.
