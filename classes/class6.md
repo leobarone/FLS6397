@@ -52,30 +52,43 @@ Minha expectativa é que vocês possa fazer de 2 a 3 capítulos da parte A em sa
 ##### A - Novos tópicos fundamentais - leitura obrigatória
 
 1 - [Cap 3. Visualização de dados](http://r4ds.had.co.nz/data-visualisation.html)
+
 2 - [Cap 7. Análise exploratória de dados](http://r4ds.had.co.nz/exploratory-data-analysis.html)
+
 3 - [Cap 19. Funções](http://r4ds.had.co.nz/functions.html)
+
 4 - [Cap 20. Vetores](http://r4ds.had.co.nz/vectors.html)
+
 5 - [Cap 21. Iteração](http://r4ds.had.co.nz/iteration.html)
 
 ##### B - Velhos tópicos fundamentais - revisão, pular se estiver confortável com os tópicos
 
 6 - [Cap 5. Transformação de dados](http://r4ds.had.co.nz/transform.html)
+
 7 - [Cap 10. Tibbles](http://r4ds.had.co.nz/tibbles.html)
+
 8 - [Cap 11. Importação de dados](http://r4ds.had.co.nz/data-import.html)
+
 9 - [Cap 20. Dados 'Tidy'](http://r4ds.had.co.nz/tidy-data.html)
+
 10 - [Cap 21. Iteração](http://r4ds.had.co.nz/relational-data.html)
 
 ##### C - Tópicos interessantes, porém menos importantes - leitura opcional
 
 11 - [Cap 18. Pipes](http://r4ds.had.co.nz/pipes.html)
+
 12 - [Cap 16. Datas e tempo](http://r4ds.had.co.nz/dates-and-times.html)
+
 13 - [Cap 15. Fatores](http://r4ds.had.co.nz/factors.html)
 
 ##### D - Workdflows - leitura opcional
 
 14 - [Cap 4 - Workflow basics](http://r4ds.had.co.nz/workflow-basics.html)
+
 15 - [Cap 4 - Workflow scripts](http://r4ds.had.co.nz/workflow-scripts.html)
+
 16 - [Cap 4 - Workflow projects](http://r4ds.had.co.nz/workflow-projects.html)
+
 17 - [Cap 4 - Workflow R Markdown](http://r4ds.had.co.nz/r-markdown-workflow.html)
 
 ### Desafio 3
