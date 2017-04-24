@@ -15,20 +15,17 @@ O curso está dividido em duas partes. A primeira parte do curso foca na prepara
 
 ## Aulas
 
-- 13/03/2017 - [Aula 1](https://github.com/leobarone/FLS6397/blob/master/classes/class1.md) - Introdução ao curso e R Básico
-- 20/03/2017 - [Aula 2](https://github.com/leobarone/FLS6397/blob/master/classes/class2.md) - Do básico ao intermediário
-- 27/03/2017 - [Aula 3](https://github.com/leobarone/FLS6397/blob/master/classes/class3.md) - Abrindo e manipulando _data frames_
-- 03/04/2017 - [Aula 4](https://github.com/leobarone/FLS6397/blob/master/classes/class4.md) - Primeiros passos no tidyverse
+- 13/03/2017 - [Aula 1](https://github.com/leobarone/FLS6397/blob/master/classes/class1.md) - Introdução ao curso e R Básico.
+- 20/03/2017 - [Aula 2](https://github.com/leobarone/FLS6397/blob/master/classes/class2.md) - Do básico ao intermediário.
+- 27/03/2017 - [Aula 3](https://github.com/leobarone/FLS6397/blob/master/classes/class3.md) - Abrindo e manipulando _data frames_.
+- 03/04/2017 - [Aula 4](https://github.com/leobarone/FLS6397/blob/master/classes/class4.md) - Primeiros passos no tidyverse.
 - 10/04/2017 - [Aula 5](https://github.com/leobarone/FLS6397/blob/master/classes/class5.md) - Webscrapping com R. Presença em sala de aula será opcional.
-- 17/04/2017 - Não haverá aula presencial.
-- 24/04/2017 - [Aula 6](https://github.com/leobarone/FLS6397/blob/master/classes/class6.md) - R para Ciência de dados e introdução ao R Markdown
+- 17/04/2017 - Não haverá aula.
+- 24/04/2017 - [Aula 6](https://github.com/leobarone/FLS6397/blob/master/classes/class6.md) - R para Ciência de dados e introdução ao R Markdown.
 - 01/05/2017 - Feriado Nacional.
 - 08/05/2017 - [Aula 7](https://github.com/leobarone/FLS6397/blob/master/classes/class7.md) - R para Ciência de dados (continuação) - não haverá aula presencial por conta do Seminário Discente
-<<<<<<< HEAD
 - 15/05/2017 - [Aula 8]
 - 22/05/2017 - [Aula 9]
 - 29/05/2017 - [Aula 10] 
 - 05/06/2017 - [Aula 11]
 - ? - [Aula 12]
-=======
->>>>>>> e4890a3b1343a1f46227668748e59ea767e66b13
