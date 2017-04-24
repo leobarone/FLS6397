@@ -85,11 +85,11 @@ Minha expectativa é que vocês possa fazer de 2 a 3 capítulos da parte A em sa
 
 14 - [Cap 4 - Workflow basics](http://r4ds.had.co.nz/workflow-basics.html)
 
-15 - [Cap 4 - Workflow scripts](http://r4ds.had.co.nz/workflow-scripts.html)
+15 - [Cap 6 - Workflow scripts](http://r4ds.had.co.nz/workflow-scripts.html)
 
-16 - [Cap 4 - Workflow projects](http://r4ds.had.co.nz/workflow-projects.html)
+16 - [Cap 8 - Workflow projects](http://r4ds.had.co.nz/workflow-projects.html)
 
-17 - [Cap 4 - Workflow R Markdown](http://r4ds.had.co.nz/r-markdown-workflow.html)
+17 - [Cap 30 - Workflow R Markdown](http://r4ds.had.co.nz/r-markdown-workflow.html)
 
 ### Desafio 3
 
