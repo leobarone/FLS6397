@@ -23,7 +23,7 @@ O curso está dividido em duas partes. A primeira parte do curso foca na prepara
 - 17/04/2017 - Não haverá aula.
 - 24/04/2017 - [Aula 6](https://github.com/leobarone/FLS6397/blob/master/classes/class6.md) - R para Ciência de dados e introdução ao R Markdown.
 - 01/05/2017 - Feriado Nacional.
-- 08/05/2017 - [Aula 7](https://github.com/leobarone/FLS6397/blob/master/classes/class7.md) - R para Ciência de dados (continuação) - não haverá aula presencial por conta do Seminário Discente
+- 08/05/2017 - [Aula 7](https://github.com/leobarone/FLS6397/blob/master/classes/class7.md) - R para Ciência de dados (continuação) - não haverá aula presencial por conta do Seminário Discente.
 - 15/05/2017 - [Aula 8]
 - 22/05/2017 - [Aula 9]
 - 29/05/2017 - [Aula 10] 
