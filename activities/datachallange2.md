@@ -9,7 +9,9 @@
 
 Data: 28/04
 
-Formato: 2 arquivos: (1) RScript (arquivo .R); (2) arquivo .pdf produzido com RMarkdown (aprenderemos sobre RMarkdown no dia 24/04)
+Formato: 2 arquivos: (1) RScript (arquivo .R); (2) arquivo .pdf ou .html produzido com RMarkdown (aprenderemos sobre RMarkdown no dia 24/04).
+
+Atualização: se você perdeu a apresentaçãosobre RMarkdown, recomendo ler o curto capítulo [_R Markdown basics](http://r4ds.had.co.nz/r-markdown.html#r-markdown-basics) do livro _R for Data Science_ sobre o tema. Se você tiver problema com o RMarkdown, pode me entregar apenas um script.
 
 Via: e-mail com título "[FLS6397] - D2".
 
@@ -17,11 +19,11 @@ __OBS: VOCÊ PODE FAZER ESTA ATIVIDADE SOZINH@ OU EM GRUPO DE ATÉ 3 PESSOAS__
 
 ## Instruções para a atividade
 
-Siga as instruções abaixo. Faça no arquivo de RMarkdown uma síntese de sua atividade e apresente apenas o essencial do código (ocê deve julgar o que é essencial.
+Siga as instruções abaixo. Faça no arquivo de RMarkdown uma síntese de sua atividade e apresente apenas o essencial do código (você deve julgar o que é essencial).
 
 Documente __TODOS__ os seus passos no arquivo de script. Comente no seu script __TODOS__ os seus passos e explique a si mesm@ suas escolhas e estratégias.
 
-O arquivo .pdf produzido em RMarkdown deve contar as informações dos integrantes do grupo.
+O arquivo .pdf ou .html produzido em RMarkdown deve contar as informações dos integrantes do grupo.
 
 As primeiras linhas do seu script devem conter suas informações pessoais como comentário, tal qual o modelo abaixo:
 

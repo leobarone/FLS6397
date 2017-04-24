@@ -21,3 +21,5 @@ O curso está dividido em duas partes. A primeira parte do curso foca na prepara
 - 03/04/2017 - [Aula 4](https://github.com/leobarone/FLS6397/blob/master/classes/class4.md) - Primeiros passos no tidyverse
 - 10/04/2017 - [Aula 5](https://github.com/leobarone/FLS6397/blob/master/classes/class5.md) - Webscrapping com R. Presença em sala de aula será opcional.
 - 17/04/2017 - Não haverá aula presencial.
+- 24/04/2017 - [Aula 6](https://github.com/leobarone/FLS6397/blob/master/classes/class6.md) - R para Ciência de dados e introdução ao R Markdown
+- 08/05/2017 - [Aula 7](https://github.com/leobarone/FLS6397/blob/master/classes/class7.md) - R para Ciência de dados (continuação) - não haverá aula presencial

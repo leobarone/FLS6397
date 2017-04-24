@@ -7,7 +7,7 @@
 
 ### Avisos importantes
 
-Teremos ums interrupção longa no curso nos dias 10 e 17/04. Como já avisei por e-mail, estarei em sala de aula das 9h as 12h no dia 10/04, mas não teremos aula regular por conta da semana santa e por eu ter cancelado esta data anteriormente, e não poderei das aula no dia 17/04.
+Teremos uma interrupção longa no curso nos dias 10 e 17/04. Como já avisei por e-mail, estarei em sala de aula das 9h as 12h no dia 10/04, mas não teremos aula regular por conta da semana santa e por eu ter cancelado esta data anteriormente, e não poderei das aula no dia 17/04.
 
 Para não pedermos o ritmo, faremos uma pausa na nossa incursão no _tidyverse_ e veremos um pouco de raspagem de dados na internet com o material da oficina que organizei em 2016 no DCP-USP. Você deve terminar este material antes da aula de 24/07.
 
