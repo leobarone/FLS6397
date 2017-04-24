@@ -53,7 +53,7 @@ Minha expectativa é que você termine pelo menos a parte A nesta semana e leia 
 
 9 - [Cap 20. Dados 'Tidy'](http://r4ds.had.co.nz/tidy-data.html)
 
-10 - [Cap 21. Iteração](http://r4ds.had.co.nz/relational-data.html)
+10 - [Cap 21. Dados Relacionais](http://r4ds.had.co.nz/relational-data.html)
 
 ##### C - Tópicos interessantes, porém menos importantes - leitura opcional
 

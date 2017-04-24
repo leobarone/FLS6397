@@ -71,7 +71,7 @@ Minha expectativa é que vocês possa fazer de 2 a 3 capítulos da parte A em sa
 
 9 - [Cap 20. Dados 'Tidy'](http://r4ds.had.co.nz/tidy-data.html)
 
-10 - [Cap 21. Iteração](http://r4ds.had.co.nz/relational-data.html)
+10 - [Cap 21. Dados Relacionais](http://r4ds.had.co.nz/relational-data.html)
 
 ##### C - Tópicos interessantes, porém menos importantes - leitura opcional
 
