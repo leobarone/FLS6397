@@ -73,10 +73,6 @@ Minha expectativa é que você termine pelo menos a parte A nesta semana e leia 
 
 17 - [Cap 30 - Workflow R Markdown](http://r4ds.had.co.nz/r-markdown-workflow.html)
 
-### Desafio 4
-
-Teremos um desafio 4 com entrega 12/05. Instruções em breve.
-
 ### Roteiro pós-aula
 
 O roteiro pós-aula não é diferente do roteiro para a aula.

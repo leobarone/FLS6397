@@ -91,10 +91,6 @@ Minha expectativa é que vocês possa fazer de 2 a 3 capítulos da parte A em sa
 
 17 - [Cap 30 - Workflow R Markdown](http://r4ds.had.co.nz/r-markdown-workflow.html)
 
-### Desafio 3
-
-Teremos um desafio 3 com entrega 05/05. Instruções em breve.
-
 ### Roteiro pós-aula
 
 O curso será bastante mais rápido a partir de agora. Não deixe nada para trás. O roteiro pós-aula não é diferente do roteiro para a aula.

@@ -29,3 +29,14 @@ O curso está dividido em duas partes. A primeira parte do curso foca na prepara
 - 29/05/2017 - [Aula 10] 
 - 05/06/2017 - [Aula 11]
 - ? - [Aula 12]
+
+## Desafios
+
+- [Desafio 0](https://github.com/leobarone/FLS6397/blob/master/activities/datachallange0.md)
+- [Desafio 1](https://github.com/leobarone/FLS6397/blob/master/activities/datachallange1.md)
+- [Desafio 2](https://github.com/leobarone/FLS6397/blob/master/activities/datachallange2.md)
+- Desafio 3 - entrega 16/05
+- Desafio 4 - entrega 23/05
+- Proposta projeto final
+- Desafio 5 - entrega 30/05
+- Projeto final - data a combinar
