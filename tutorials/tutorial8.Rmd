@@ -23,7 +23,7 @@ Nossa primeira tarefa é baixar os dados e faremos isso de forma inteligente e s
 ```{r}
 url_cadatros_escolas <- "http://dados.prefeitura.sp.gov.br/dataset/8da55b0e-b385-4b54-9296-d0000014ddd5/resource/39db5031-7238-4139-bcaa-e620a3180188/download/escolasr34fev2017.csv"
 download.file(url_cadatros_escolas, "temp.csv")
-/```
+```
 
 Veja que baixar o arquivo diretamente no R é preferível ao processo manual, pois podemos rapidamente reproduzir o processo, além de documentá-lo. Vamos abrir o arquivo:
 

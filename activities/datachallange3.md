@@ -3,7 +3,7 @@
 - Responsável: Leonardo S. Barone
 - Data: 10/05/2017
 
-## Desafio 2
+## Desafio 3
 
 ## Instruções para Entrega
 
