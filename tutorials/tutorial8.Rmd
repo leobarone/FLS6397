@@ -28,12 +28,14 @@ download.file(url_cadatros_escolas, "temp.csv")
 Veja que baixar o arquivo diretamente no R é preferível ao processo manual, pois podemos rapidamente reproduzir o processo, além de documentá-lo. Vamos abrir o arquivo:
 
 ```{r}
-escolas <- read_delim("~/FLS6397/temp.csv", delim = ";")
+library(readr)
+escolas <- read_delim("temp.csv", delim = ";")
 ```
 
 Explore o arquivo com o comando _glimpse_:
 
 ```{r}
+library(dplyr)
 glimpse(escolas)
 ```
 
@@ -190,8 +192,8 @@ Com um _for loop_, procuraremos a latitude e longitude dos 46 endereços:
 ```{r}
 # Para remover problemas com enconding, removi algumas observacoes usando
 # as linhas marcadas como comentario abaixo. No Windows pode ser desnecessario
-# ceu$endereco <- iconv(ceu$endereco, to = "ASCII//TRANSLIT")
-# ceu <- ceu[!is.na(ceu$endereco),]
+ceu$endereco <- iconv(ceu$endereco, to = "ASCII//TRANSLIT")
+ceu <- ceu[!is.na(ceu$endereco),]
 latlong <- data.frame()
 for (i in 1:nrow(ceu)){
   latlong <- bind_rows(latlong, geocode(ceu$endereco[i]))
@@ -357,7 +359,7 @@ plot(abc)
 ```
 
 Examinando a estrutura de "abc" notamos que o conjunto de polígonos e o data frame contém agora apenas 3 observações, como esperávamos.
-
+
 ```{r}
 str(abc, max.level = 2)
 ```
@@ -393,7 +395,7 @@ url_munic_15 <- "https://raw.githubusercontent.com/leobarone/FLS6397/master/data
 munic_15 <- read.table(url_munic_15, header = T, sep = ";") %>%
   rename(COD_IBGE = A1, ano_pd = A18) %>%
   select(COD_IBGE, ano_pd) %>%
-  mutate(ano_pd = as.numeric(as.character(ano.pd)))
+  mutate(ano_pd = as.numeric(as.character(ano_pd)))
 ```
 
 Para adicioanrmos essa informação ao objeto de dados espaciais, basta fazermos um _left\_join_ com os dados em \@data:

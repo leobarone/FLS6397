@@ -17,7 +17,8 @@ Rever em sala de aula webscrapping, avançar no Desafio 3 e aprender o básico d
 
 Leia o [Desafio 3](https://github.com/leobarone/FLS6397/blob/master/activities/datachallange3.md) e verifique se você sabe como fazê-lo. Hoje será sua última chance de tirar dúvidas sobre esse desafio.
 
-A seguir, faça o tutorial 8 sobre mapas no R [versão web](https://github.com/leobarone/FLS6397/blob/master/tutorials/tutorial8.Rmd). Siga o seu próprio ritmo.
+A seguir, faça o tutorial 8 sobre mapas no R [versão web](https://github.com/leobarone/FLS6397/blob/master/tutorials/tutorial8.Rmd) ou [versão pdf](https://github.com/leobarone/FLS6397/blob/master/tutorials/tutorial8.pdf). Siga o seu próprio ritmo.
+
 
 Em momento oportuno, interrompirei a turma para falar um pouco sobre webscrapping, pois tenho a sensação de que muitos continuam com dúvidas.
 
