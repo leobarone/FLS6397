@@ -45,7 +45,15 @@ Você deve construir esse data frame combinando as seguintes fontes:
 - [Estatísticas sobre óbitos - DATASUS](http://tabnet.datasus.gov.br/cgi/deftohtm.exe?sim/cnv/pobt10br.def)
 - Outra fonte de sua escolha.
 
+Para os que tiverem dificuldades com as bases de dados, utilize as cópias que deixei no repositório: [MUNIC15](https://raw.githubusercontent.com/leobarone/FLS6397/master/data/Base_MUNIC_2015_xls.zip), [DATASUS](https://raw.githubusercontent.com/leobarone/FLS6397/master/data/obitos_datasus.csv)
+
 Lembre-se que as bases devem ser combinadas utilizando o código de município. Algumas fontes podem contar códigos com 6 ou 7 dígitos e você deve ignorar o 7o dígito se isso ocorrer.
+
+Para tranformar um código de 7 dígitos em um de 6 dígitos faça:
+
+```{r setup, include=FALSE}
+cod_ibge6 <- as.numeric(subst(cod_ibge7, 1, 6))
+```
 
 Escolha as variáveis de seu interesse em cada fonte e mantenha apenas estas no data frame.
 

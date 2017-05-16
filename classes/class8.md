@@ -25,3 +25,11 @@ Em momento oportuno, interrompirei a turma para falar um pouco sobre webscrappin
 ### Desafio 4
 
 Ao final do dia estará no ar o Desafio 4, sobre mapas no R. Você deve entregá-lo até o dia 26/05. As instruções para entrega estão no próprio desafio.
+
+### Exemplos de Webscrapping realizados em sala de aula usando o pacote _rvest_
+
+- [Transparência](https://github.com/leobarone/FLS6397/blob/master/miscelanea/webscrapping_transparencia.R)
+
+- [BCB](https://github.com/leobarone/FLS6397/blob/master/miscelanea/webscrapping_bcb.R)
+
+- [STF](https://github.com/leobarone/FLS6397/blob/master/miscelanea/webscrapping_stf.R)

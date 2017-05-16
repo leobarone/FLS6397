@@ -1,14 +1,3 @@
----
-title: "Manipulação de dados em R"
-author: "Leonardo Sangali Barone"
-date: "March 27, 2017"
-output: pdf_document
----
-  
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
 # Mapas no R
 
 Data frames foram, até este momento do curso, o protagonista de nossa análise de dados. Vimos como manipular dados que estão sempre no mesmo formato

@@ -1,14 +1,3 @@
----
-title: "Abrindo dados no R"
-author: "Leonardo Sangali Barone"
-date: "March 27, 2017"
-output: pdf_document
----
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
 # Abrindo dados no R
 
 Neste tutorial vamos cobrir uma série de métodos disponíveis para abrirmos arquivos de texto. excel e de outros softwares de análise de dadoss no R. Vamos dar atenção aos argumentos das funções de forma a solucionar dificuldades de abertura de dados com diferentes características ou em sistemas operacionais variados.
