@@ -45,7 +45,7 @@ Você deve construir esse data frame combinando as seguintes fontes:
 - [Estatísticas sobre óbitos - DATASUS](http://tabnet.datasus.gov.br/cgi/deftohtm.exe?sim/cnv/pobt10br.def)
 - Outra fonte de sua escolha.
 
-Para os que tiverem dificuldades com as bases de dados, utilize as cópias que deixei no repositório: [MUNIC15](https://raw.githubusercontent.com/leobarone/FLS6397/master/data/Base_MUNIC_2015_xls.zip), [DATASUS](https://raw.githubusercontent.com/leobarone/FLS6397/master/data/obitos_datasus.csv)
+Para os que tiverem dificuldades com as bases de dados, utilize as cópias que deixei no repositório: [MUNIC15](https://raw.githubusercontent.com/leobarone/FLS6397/master/data/Base_MUNIC_2015_xls.zip), [DATASUS](https://raw.githubusercontent.com/leobarone/FLS6397/master/data/obitos_datasus.csv) e [FINBRA](https://raw.githubusercontent.com/leobarone/FLS6397/master/data/receitas_orc_finbra.zip)
 
 Lembre-se que as bases devem ser combinadas utilizando o código de município. Algumas fontes podem contar códigos com 6 ou 7 dígitos e você deve ignorar o 7o dígito se isso ocorrer.
 
