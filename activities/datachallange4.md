@@ -35,3 +35,5 @@ As primeiras linhas do seu script devem conter suas informações pessoais como 
 ### Instruções únicas
 
 Elabore 4 mapas da Região Metropolitana de São Paulo utilizando dados de cada uma das 4 fontes do Desafio 3.
+
+URL do shape file [aqui](url_shp_eleicoes_sp <- "https://github.com/leobarone/FLS6397/raw/master/data/rmsp.zip"). Você pode usar outro shapefile de município para trabalhar com o total de municípios do país, algum estado ou outra RM, se preferir e tiver o shapefile à mão.
