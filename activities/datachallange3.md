@@ -52,7 +52,7 @@ Lembre-se que as bases devem ser combinadas utilizando o código de município. 
 Para tranformar um código de 7 dígitos em um de 6 dígitos faça:
 
 ```{r setup, include=FALSE}
-cod_ibge6 <- as.numeric(subst(cod_ibge7, 1, 6))
+cod_ibge6 <- as.numeric(substr(cod_ibge7, 1, 6))
 ```
 
 Escolha as variáveis de seu interesse em cada fonte e mantenha apenas estas no data frame.
