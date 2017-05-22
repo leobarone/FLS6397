@@ -24,11 +24,11 @@ O curso está dividido em duas partes. A primeira parte do curso foca na prepara
 - 24/04/2017 - [Aula 6](https://github.com/leobarone/FLS6397/blob/master/classes/class6.md) - R para Ciência de dados e introdução ao R Markdown.
 - 01/05/2017 - Feriado Nacional.
 - 08/05/2017 - [Aula 7](https://github.com/leobarone/FLS6397/blob/master/classes/class7.md) - R para Ciência de dados (continuação) - não haverá aula presencial por conta do Seminário Discente.
-- 15/05/2017 - [Aula 8](https://github.com/leobarone/FLS6397/blob/master/classes/class8.md) - Mapas no R
-- 22/05/2017 - [Aula 9]
-- 29/05/2017 - [Aula 10] 
-- 05/06/2017 - [Aula 11]
-- ? - [Aula 12]
+- 15/05/2017 - [Aula 8](https://github.com/leobarone/FLS6397/blob/master/classes/class8.md) - Mapas no R 
+- 22/05/2017 - [Aula 9](https://github.com/leobarone/FLS6397/blob/master/classes/class9.md) - (1) Sistemas de Gerenciamento de Banco de Dados, R e SQL; (2) Introdução ridiculamente breve ao aprendizado de máquina.
+- 29/05/2017 - [Aula 10](https://github.com/leobarone/FLS6397/blob/master/classes/class10.md) - Strings e Mineração de Textos no R
+- 05/06/2017 - [Aula 11](https://github.com/leobarone/FLS6397/blob/master/classes/class11.md) - Aprofundamento em ggplot e programação funcional
+- 12/06/2017 - [Aula 12](https://github.com/leobarone/FLS6397/blob/master/classes/class12.md) - Aprofundamento em ggplot e programação funcional (continuação)
 
 ## Desafios
 
@@ -37,6 +37,6 @@ O curso está dividido em duas partes. A primeira parte do curso foca na prepara
 - [Desafio 2](https://github.com/leobarone/FLS6397/blob/master/activities/datachallange2.md)
 - [Desafio 3](https://github.com/leobarone/FLS6397/blob/master/activities/datachallange3.md) - entrega 19/05
 - [Desafio 4](https://github.com/leobarone/FLS6397/blob/master/activities/datachallange4.md) - entrega 26/05
-- Desafio 5 - entrega 02/06
+- Desafio 5 - entrega 07/06
 - Proposta projeto final
 - Projeto final - data a combinar

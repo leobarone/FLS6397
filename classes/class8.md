@@ -3,7 +3,7 @@
 - Responsável: Leonardo S. Barone
 - Data: 15/05/2017
 
-## Aula 5 - Mapas no R
+## Aula 8 - Mapas no R
 
 ### Avisos importantes
 
@@ -20,7 +20,7 @@ Leia o [Desafio 3](https://github.com/leobarone/FLS6397/blob/master/activities/d
 A seguir, faça o tutorial 8 sobre mapas no R [versão web](https://github.com/leobarone/FLS6397/blob/master/tutorials/tutorial8.Rmd) ou [versão pdf](https://github.com/leobarone/FLS6397/blob/master/tutorials/tutorial8.pdf). Siga o seu próprio ritmo.
 
 
-Em momento oportuno, interrompirei a turma para falar um pouco sobre webscrapping, pois tenho a sensação de que muitos continuam com dúvidas.
+Em momento oportuno, interromperei a turma para falar um pouco sobre webscrapping, pois tenho a sensação de que muitos continuam com dúvidas.
 
 ### Desafio 4
 
