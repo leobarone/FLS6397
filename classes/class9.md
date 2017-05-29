@@ -17,9 +17,9 @@ Estamos caminhando para o final do curso e tivemos um mês e meio de muita turbu
 
 ### Roteiro para a aula
 
-Leia o [Desafio 4](https://github.com/leobarone/FLS6397/blob/master/activities/datachallange4.md) e verifique se você sabe como fazê-lo. Hoje será sua última chance de tirar dúvidas sobre esse desafio.
+Leia o [Desafio 4](https://github.com/leobarone/FLS6397/blob/master/activities/datachallange4.md) e verifique se você sabe como fazê-lo. Hoje será sua última chance de tirar dúvidas sobre esse desafio. 
 
-A seguir, faça o tutorial 9 sobre R e MySQL [versão web](https://github.com/leobarone/FLS6397/blob/master/tutorials/tutorial9.Rmd).
+A seguir, faça o tutorial 9 sobre R e MySQL [versão web](https://github.com/leobarone/FLS6397/blob/master/tutorials/tutorial9.Rmd). [Tutorial Alternativo](https://github.com/leobarone/mq_bsb_17/blob/master/tutoriais/tutorialB1.md)
 
 Em momento oportuno, interromperei a turma para falar um pouco sobre SQL e MySQL. Ainda que não vejamos a linguagem, quero que todo mundo saia do curso com alguma noção do que é um Sistema de Gerenciamento de Banco de Dados e como trabalhar com dados que estão lá usando R. SQL é extremamente útil e popular em governos e empresas e, na minha avaliação, subutilizado na acadêmia.
 
