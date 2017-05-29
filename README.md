@@ -30,6 +30,7 @@ O curso está dividido em duas partes. A primeira parte do curso foca na prepara
 - 05/06/2017 - [Aula 11](https://github.com/leobarone/FLS6397/blob/master/classes/class11.md) - Aprofundamento em ggplot e programação funcional
 - 12/06/2017 - [Aula 12](https://github.com/leobarone/FLS6397/blob/master/classes/class12.md) - Aprofundamento em ggplot e programação funcional (continuação)
 
+
 ## Desafios
 
 - [Desafio 0](https://github.com/leobarone/FLS6397/blob/master/activities/datachallange0.md)

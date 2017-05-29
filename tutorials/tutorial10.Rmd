@@ -1,4 +1,4 @@
-# Tutorial D1 - Introdução ao Aprendizado de Máquina
+# Introdução ao Aprendizado de Máquina
 
 O Aprendizado de Máquina é um conjunto de técnicas de estatísticas usado para a construção de modelos de classificação, previsão e agrupamento de dados. Chamamos este conjunto de técnicas de aprendizado de máquina pois estamos trabalhando com algoritmos que "aprendem" com os dados para melhorar performance da tarefa.
 
