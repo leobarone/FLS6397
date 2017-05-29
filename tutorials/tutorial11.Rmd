@@ -24,7 +24,7 @@ Vamos capturar os links de cada discurso. Examine a url antes de prosseguir para
 ```{r}
 url_discursos <- url_tabela_discursos %>%
   read_html() %>%
-  html_nodes(xpath = "//table[@class ='tabela-1 variasColunas']//td/a") %>%
+  html_nodes(xpath = "//table[@class ='tabela-padrao-bootstrap table-bordered']//td/a") %>%
   html_attr(name = "href")
 ```
 
