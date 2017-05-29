@@ -54,6 +54,8 @@ for (url_discurso in url_discursos) {
     html_text()
   
   discursos <- c(discursos, discurso)
+  
+  Sys.sleep(0.5)
 }
 ```
 
