@@ -38,7 +38,7 @@ O curso está dividido em duas partes. A primeira parte do curso foca na prepara
 - [Desafio 2](https://github.com/leobarone/FLS6397/blob/master/activities/datachallange2.md)
 - [Desafio 3](https://github.com/leobarone/FLS6397/blob/master/activities/datachallange3.md) - entrega 19/05
 - [Desafio 4](https://github.com/leobarone/FLS6397/blob/master/activities/datachallange4.md) - entrega 26/05
-- Desafio 5 - entrega 07/06
+- [Desafio 5](https://github.com/leobarone/FLS6397/blob/master/activities/datachallange5.md) - entrega 12/06
 - Data Limite para entrega de desafios atrasados - 12/06
 - Trazer proposta projeto final em 05/06
 - Projeto final - 31 de JULHO de 2017 
